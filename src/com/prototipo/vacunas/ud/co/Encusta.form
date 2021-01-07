@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.prototipo.vacunas.ud.co.Encusta">
+  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="1035" height="1230"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <scrollpane id="223cc">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <grid id="89af9" layout-manager="GridLayoutManager" row-count="48" column-count="12" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints/>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="cb322" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="1" row-span="2" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Seleccione edad"/>
+                </properties>
+              </component>
+              <component id="94b13" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Selecione localidad"/>
+                </properties>
+              </component>
+              <component id="17d4f" class="javax.swing.JSpinner" binding="spinner1" default-binding="true">
+                <constraints>
+                  <grid row="0" column="2" row-span="2" col-span="3" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="4cb92" class="javax.swing.JComboBox" binding="comboBox1" default-binding="true">
+                <constraints>
+                  <grid row="3" column="2" row-span="1" col-span="5" vsize-policy="0" hsize-policy="2" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <editable value="true"/>
+                  <model>
+                    <item value="00-Seleccione localidad"/>
+                    <item value="01-Usaquén&#9;"/>
+                    <item value="02-Chapinero&#9;"/>
+                    <item value="03-Santa Fe&#9;"/>
+                    <item value="04-San Cristóbal&#9;"/>
+                    <item value="05-Usme&#9;"/>
+                    <item value="06-Tunjuelito&#9;"/>
+                    <item value="07-Bosa&#9;"/>
+                    <item value="08-Kennedy&#9;"/>
+                    <item value="09-Fontibón&#9;"/>
+                    <item value="10-Engativá&#9;"/>
+                    <item value="11-Suba&#9;"/>
+                    <item value="12-Barrios Unidos&#9;"/>
+                    <item value="13-Teusaquillo&#9;"/>
+                    <item value="14-Los Mártires&#9;"/>
+                    <item value="15-Antonio Nariño&#9;"/>
+                    <item value="16-Puente Aranda&#9;"/>
+                    <item value="17-La Candelaria&#9;"/>
+                    <item value="18-Rafael Uribe Uribe&#9;"/>
+                    <item value="19-Ciudad Bolívar"/>
+                    <item value="20-Sumapaz"/>
+                    <item value="21-Fuera de Bogota"/>
+                  </model>
+                </properties>
+              </component>
+              <component id="dab0d" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Cuantas personas viven con usted"/>
+                </properties>
+              </component>
+              <component id="cc043" class="javax.swing.JRadioButton" binding="soloUstedRadioButton" default-binding="true">
+                <constraints>
+                  <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Solo usted"/>
+                </properties>
+              </component>
+              <component id="b3b0e" class="javax.swing.JRadioButton" binding="a1RadioButton" default-binding="true">
+                <constraints>
+                  <grid row="5" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="1"/>
+                </properties>
+              </component>
+              <component id="8604" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="2" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Cuantas personas deben de salir"/>
+                </properties>
+              </component>
+              <component id="3b08b" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="de su casa"/>
+                </properties>
+              </component>
+              <component id="ff5cd" class="javax.swing.JRadioButton" binding="soloUstedRadioButton1" default-binding="true">
+                <constraints>
+                  <grid row="7" column="2" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Solo usted"/>
+                </properties>
+              </component>
+              <component id="6dbd6" class="javax.swing.JRadioButton" binding="a1RadioButton1" default-binding="true">
+                <constraints>
+                  <grid row="7" column="3" row-span="2" col-span="4" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="1"/>
+                </properties>
+              </component>
+              <component id="fd62a" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="10" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Alguni tiene enfermedades respiratorias"/>
+                </properties>
+              </component>
+              <component id="ac580" class="javax.swing.JRadioButton" binding="siRadioButton" default-binding="true">
+                <constraints>
+                  <grid row="10" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Si"/>
+                </properties>
+              </component>
+              <component id="ac6d0" class="javax.swing.JRadioButton" binding="noRadioButton" default-binding="true">
+                <constraints>
+                  <grid row="10" column="3" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="No"/>
+                </properties>
+              </component>
+              <component id="20b62" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="12" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Alguno es trabajador de la salud"/>
+                </properties>
+              </component>
+              <component id="74920" class="javax.swing.JRadioButton" binding="siRadioButton2" default-binding="true">
+                <constraints>
+                  <grid row="12" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Si"/>
+                </properties>
+              </component>
+              <component id="a635b" class="javax.swing.JRadioButton" binding="noRadioButton1" default-binding="true">
+                <constraints>
+                  <grid row="12" column="3" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="No"/>
+                </properties>
+              </component>
+              <component id="a867f" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="14" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Utiliza transporte publico"/>
+                </properties>
+              </component>
+              <component id="dcdea" class="javax.swing.JRadioButton" binding="siRadioButton1" default-binding="true">
+                <constraints>
+                  <grid row="14" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Si"/>
+                </properties>
+              </component>
+              <component id="7038f" class="javax.swing.JRadioButton" binding="noRadioButton2" default-binding="true">
+                <constraints>
+                  <grid row="14" column="3" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="No"/>
+                </properties>
+              </component>
+              <component id="4229d" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="16" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Desinfecta sus prendas al llegar a casa"/>
+                </properties>
+              </component>
+              <component id="52ca5" class="javax.swing.JRadioButton" binding="siRadioButton3" default-binding="true">
+                <constraints>
+                  <grid row="16" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Si"/>
+                </properties>
+              </component>
+              <component id="b12d9" class="javax.swing.JRadioButton" binding="noRadioButton3" default-binding="true">
+                <constraints>
+                  <grid row="16" column="3" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="No"/>
+                </properties>
+              </component>
+              <component id="9815f" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="18" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="2" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Realizo algun viaje internacional"/>
+                </properties>
+              </component>
+              <component id="57db9" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="19" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value=" en los ultimos 30 dias"/>
+                </properties>
+              </component>
+              <component id="98a4c" class="javax.swing.JRadioButton" binding="siRadioButton6" default-binding="true">
+                <constraints>
+                  <grid row="18" column="2" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Si"/>
+                </properties>
+              </component>
+              <component id="c6d08" class="javax.swing.JRadioButton" binding="noRadioButton6" default-binding="true">
+                <constraints>
+                  <grid row="18" column="3" row-span="2" col-span="4" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="No"/>
+                </properties>
+              </component>
+              <component id="a8cbc" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="21" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="2" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Realizo algun viaje nacional"/>
+                </properties>
+              </component>
+              <component id="eddff" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="22" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value=" en los ultimos 30 dias"/>
+                </properties>
+              </component>
+              <component id="d681d" class="javax.swing.JRadioButton" binding="siRadioButton4" default-binding="true">
+                <constraints>
+                  <grid row="21" column="2" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Si"/>
+                </properties>
+              </component>
+              <component id="960ef" class="javax.swing.JRadioButton" binding="noRadioButton4" default-binding="true">
+                <constraints>
+                  <grid row="21" column="3" row-span="2" col-span="4" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="No"/>
+                </properties>
+              </component>
+              <component id="e70dd" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="24" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="2" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Mantiene la distancia social en lugares"/>
+                </properties>
+              </component>
+              <component id="664e5" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="25" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="como super mercados, bancos etc."/>
+                </properties>
+              </component>
+              <component id="c3de0" class="javax.swing.JRadioButton" binding="siRadioButton5" default-binding="true">
+                <constraints>
+                  <grid row="24" column="2" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Si"/>
+                </properties>
+              </component>
+              <component id="2927a" class="javax.swing.JRadioButton" binding="noRadioButton5" default-binding="true">
+                <constraints>
+                  <grid row="24" column="3" row-span="2" col-span="4" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="No"/>
+                </properties>
+              </component>
+              <hspacer id="84239">
+                <constraints>
+                  <grid row="0" column="11" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <component id="2afc6" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="27" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Asistió a eventos sociales ultimamente"/>
+                </properties>
+              </component>
+              <component id="6c0c9" class="javax.swing.JRadioButton" binding="siRadioButton7" default-binding="true">
+                <constraints>
+                  <grid row="27" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Si"/>
+                </properties>
+              </component>
+              <component id="252e5" class="javax.swing.JRadioButton" binding="noRadioButton7" default-binding="true">
+                <constraints>
+                  <grid row="27" column="3" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="No"/>
+                </properties>
+              </component>
+              <component id="82642" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="29" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Que tan seguido se lava las manos"/>
+                </properties>
+              </component>
+              <component id="a303c" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="31" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="2" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Que tan seguido se desinfecta "/>
+                </properties>
+              </component>
+              <component id="f4ed9" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="32" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="con alcohol o gel antibacterial"/>
+                </properties>
+              </component>
+              <component id="a61bc" class="javax.swing.JComboBox" binding="comboBox3" default-binding="true">
+                <constraints>
+                  <grid row="31" column="2" row-span="2" col-span="5" vsize-policy="0" hsize-policy="2" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="4b09f" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="34" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="2" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Que tan seguido desinfectas los objetos y"/>
+                </properties>
+              </component>
+              <component id="25b66" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="35" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value=" superficies que tocas con frecuencia?"/>
+                </properties>
+              </component>
+              <component id="5d76d" class="javax.swing.JComboBox" binding="comboBox4" default-binding="true">
+                <constraints>
+                  <grid row="34" column="2" row-span="2" col-span="5" vsize-policy="0" hsize-policy="2" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="acb9" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="37" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Usa tapabocas desechable o reutilizable"/>
+                </properties>
+              </component>
+              <component id="e3457" class="javax.swing.JRadioButton" binding="desechableRadioButton" default-binding="true">
+                <constraints>
+                  <grid row="37" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Desechable"/>
+                </properties>
+              </component>
+              <component id="9d8a2" class="javax.swing.JRadioButton" binding="reutilizableRadioButton" default-binding="true">
+                <constraints>
+                  <grid row="37" column="3" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Reutilizable"/>
+                </properties>
+              </component>
+              <component id="22aa0" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="39" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="si es reutilizable con que frecuencia lo lava?"/>
+                </properties>
+              </component>
+              <component id="5452f" class="javax.swing.JComboBox" binding="comboBox5" default-binding="true">
+                <constraints>
+                  <grid row="39" column="2" row-span="1" col-span="8" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="a6c1a" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="41" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Ha tenido alguno de estos sintomas recientemente"/>
+                </properties>
+              </component>
+              <component id="a0ef1" class="javax.swing.JCheckBox" binding="fiebreCheckBox" default-binding="true">
+                <constraints>
+                  <grid row="41" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Fiebre"/>
+                </properties>
+              </component>
+              <component id="74fdc" class="javax.swing.JCheckBox" binding="tosCheckBox" default-binding="true">
+                <constraints>
+                  <grid row="41" column="3" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Tos"/>
+                </properties>
+              </component>
+              <component id="ef913" class="javax.swing.JCheckBox" binding="dolorDeGargantaCheckBox" default-binding="true">
+                <constraints>
+                  <grid row="41" column="7" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Dolor de garganta"/>
+                </properties>
+              </component>
+              <component id="a3fea" class="javax.swing.JCheckBox" binding="congestionCheckBox" default-binding="true">
+                <constraints>
+                  <grid row="42" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Congestion"/>
+                </properties>
+              </component>
+              <component id="44f33" class="javax.swing.JCheckBox" binding="fatigaCheckBox" default-binding="true">
+                <constraints>
+                  <grid row="42" column="3" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Fatiga"/>
+                </properties>
+              </component>
+              <component id="7dd21" class="javax.swing.JCheckBox" binding="dificultadParaRespirarCheckBox" default-binding="true">
+                <constraints>
+                  <grid row="42" column="7" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Dificultad para respirar"/>
+                </properties>
+              </component>
+              <component id="e47bb" class="javax.swing.JCheckBox" binding="escalofrioCheckBox" default-binding="true">
+                <constraints>
+                  <grid row="43" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Escalofrio"/>
+                </properties>
+              </component>
+              <component id="21628" class="javax.swing.JCheckBox" binding="dolorDeMusculosCheckBox" default-binding="true">
+                <constraints>
+                  <grid row="43" column="3" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Dolor de Musculos"/>
+                </properties>
+              </component>
+              <component id="5f1cb" class="javax.swing.JCheckBox" binding="ningunaDeLasAnterioresCheckBox" default-binding="true">
+                <constraints>
+                  <grid row="43" column="7" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Ninguna de las anteriores"/>
+                </properties>
+              </component>
+              <component id="64871" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="45" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="2" fill="0" indent="1" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Estuvo en contacto con alguna persona "/>
+                </properties>
+              </component>
+              <component id="bcf95" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="46" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Con estos sintomas"/>
+                </properties>
+              </component>
+              <component id="fd79d" class="javax.swing.JRadioButton" binding="siRadioButton8" default-binding="true">
+                <constraints>
+                  <grid row="45" column="2" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Si"/>
+                </properties>
+              </component>
+              <component id="3ace7" class="javax.swing.JRadioButton" binding="noRadioButton8" default-binding="true">
+                <constraints>
+                  <grid row="45" column="3" row-span="2" col-span="4" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="No"/>
+                </properties>
+              </component>
+              <component id="48d91" class="javax.swing.JComboBox" binding="comboBox2" default-binding="true">
+                <constraints>
+                  <grid row="29" column="2" row-span="1" col-span="5" vsize-policy="0" hsize-policy="2" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="94293" class="javax.swing.JRadioButton" binding="a3OMasRadioButton" default-binding="true">
+                <constraints>
+                  <grid row="5" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="3 o mas"/>
+                </properties>
+              </component>
+              <component id="8738c" class="javax.swing.JRadioButton" binding="a2RadioButton1" default-binding="true">
+                <constraints>
+                  <grid row="7" column="5" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="2"/>
+                </properties>
+              </component>
+              <component id="caca2" class="javax.swing.JRadioButton" binding="a2RadioButton" default-binding="true">
+                <constraints>
+                  <grid row="5" column="5" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="2"/>
+                </properties>
+              </component>
+              <hspacer id="7314e">
+                <constraints>
+                  <grid row="24" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <hspacer id="5f49">
+                <constraints>
+                  <grid row="44" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <component id="ada9a" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="9" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="ff61f" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="b276b" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="6b4ed" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="79d6f" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="11" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="3ba6f" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="13" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="8d19a" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="15" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="c835a" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="17" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="ebeb9" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="20" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="3b5db" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="23" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="9a666" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="26" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="f537" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="28" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="7427" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="30" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="ee005" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="33" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="4d716" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="36" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="eeca8" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="38" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="3dcdc" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="40" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="77d51" class="javax.swing.JRadioButton" binding="a3OMasRadioButton1" default-binding="true">
+                <constraints>
+                  <grid row="7" column="7" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="3 o mas"/>
+                </properties>
+              </component>
+              <component id="5b44f" class="javax.swing.JButton" binding="puntajeButton" default-binding="true">
+                <constraints>
+                  <grid row="47" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Puntaje"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </scrollpane>
+    </children>
+  </grid>
+</form>

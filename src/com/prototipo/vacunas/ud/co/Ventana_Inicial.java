@@ -31,7 +31,7 @@ public class Ventana_Inicial extends JFrame {
         button3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Registro_Estudiante obj = new Registro_Estudiante();
+                Encusta obj = new Encusta();
                 obj.setVisible(true);
                 dispose();
             }
