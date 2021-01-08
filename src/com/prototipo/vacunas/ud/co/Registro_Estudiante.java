@@ -1,5 +1,7 @@
 package com.prototipo.vacunas.ud.co;
-
+/*
+Esto no sirve para  nada :v
+ */
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;

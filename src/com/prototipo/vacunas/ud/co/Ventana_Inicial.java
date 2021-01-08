@@ -16,7 +16,7 @@ public class Ventana_Inicial extends JFrame {
     private JButton button6;
     private JPanel panel1;
     private JLabel Vacunas;
-
+    private Metodos_Encuesta Method;
     public Ventana_Inicial() {
 
         setContentPane(panel1);
@@ -31,7 +31,7 @@ public class Ventana_Inicial extends JFrame {
         button3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Encusta obj = new Encusta();
+                Encuesta obj = new Encuesta(Method);
                 obj.setVisible(true);
                 dispose();
             }
