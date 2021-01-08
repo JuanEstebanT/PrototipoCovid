@@ -56,6 +56,7 @@ public class Encuesta extends JFrame {
     private JButton siguienteButton;
     private JRadioButton ManosButton1;
     private JRadioButton ManosButton2;
+    private JLabel Espacio;
     private Metodos_Encuesta puntaje;
 
     public Encuesta(Metodos_Encuesta metodo) {

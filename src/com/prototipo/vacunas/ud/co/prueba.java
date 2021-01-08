@@ -4,6 +4,8 @@ Esto no sirve para  nada :v
  */
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class prueba extends JFrame{
     private JPanel panel1;
@@ -26,12 +28,16 @@ public class prueba extends JFrame{
     public prueba(){
         panel1.setPreferredSize(new Dimension(599,699));
         setContentPane(panel1);
-
         setSize(600,700);
         // this.setResizable(false); // No maximizar ni Minimizar
         this.setLocationRelativeTo(null); // ubicación en el centro
         this.setVisible(true); // visible la ventana
         this.setTitle("CovidVac Aplha 0.1"); // poner titulo
+        button1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            }
+        });
     }
 
 }
