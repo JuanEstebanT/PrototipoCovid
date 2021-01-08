@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 
 public class Ventana_Inicial extends JFrame {
     private JButton agregarVacunasButton;
-    private JButton button2;
+    private JButton juanEsGeyButton;
     private JSpinner spinner1;
     private JSpinner spinner2;
     private JButton button3;
@@ -36,15 +36,26 @@ public class Ventana_Inicial extends JFrame {
                 dispose();
             }
         });
+
         agregarVacunasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-            prueba objj= new prueba();
-            objj.setVisible(true);
+            prueba obj = new prueba();
+            obj.setVisible(true);
+            dispose();
             }
         });
 
 
+        juanEsGeyButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                asdfgh obj = new asdfgh();
+                obj.setVisible(true);
+                dispose();
+
+            }
+        });
     }
     public void cerrar (){
         this.setVisible(false);
