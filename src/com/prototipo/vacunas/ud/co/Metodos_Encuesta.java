@@ -356,7 +356,7 @@ public class Metodos_Encuesta {
             Puntos += 2;
         }
         if (frecuencia == "2. Casi siempre"){
-            Puntos += 2;
+            Puntos += 3;
         }
         if (frecuencia == "3. Frecuentemente"){
             Puntos += 3;
