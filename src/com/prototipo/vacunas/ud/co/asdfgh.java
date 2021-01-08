@@ -23,7 +23,7 @@ public class asdfgh extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 Ventana_Inicial jhonatan_es_gey = new Ventana_Inicial();
                 jhonatan_es_gey.setVisible(true);
-                dispose(); // cierre ventanta del anterior
+                dispose(); // cierre ventanta del anterior y jdj es gay
             }
         });
     }
