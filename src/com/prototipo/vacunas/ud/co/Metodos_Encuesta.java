@@ -353,10 +353,10 @@ public class Metodos_Encuesta {
         String frecuencia;
         frecuencia = Box.getSelectedItem().toString();
         if (frecuencia == "1. Siempre"){
-            Puntos += 2;
+            Puntos += 1;
         }
         if (frecuencia == "2. Casi siempre"){
-            Puntos += 3;
+            Puntos += 2;
         }
         if (frecuencia == "3. Frecuentemente"){
             Puntos += 3;
