@@ -40,9 +40,7 @@ public class Ventana_Inicial extends JFrame {
         agregarVacunasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-            prueba obj = new prueba();
-            obj.setVisible(true);
-            dispose();
+
             }
         });
 
@@ -50,9 +48,6 @@ public class Ventana_Inicial extends JFrame {
         juanEsGeyButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                asdfgh obj = new asdfgh();
-                obj.setVisible(true);
-                dispose();
 
             }
         });
