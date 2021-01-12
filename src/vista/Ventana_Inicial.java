@@ -2,9 +2,11 @@ package vista;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Ventana_Inicial extends JFrame {
-    private JButton agregarVacunasButton;
+    public JButton agregarVacunasButton;
     private JButton quitarVacunasButton;
     private JSpinner agg_vacunas;
     private JSpinner remove_vac;
@@ -25,7 +27,7 @@ public class Ventana_Inicial extends JFrame {
         getContentPane().setBackground(Color.CYAN); // backgraund
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // terminar proceso con la x
         this.setVisible(true);
-        Vacunas.setText("Cantidad de Vacunas disponibles: ");
+
     }
 
 }

@@ -54,7 +54,6 @@ public class Ventana_Encuesta extends JFrame {
     public JRadioButton ManosButton1;
     public JRadioButton ManosButton2;
     private JLabel Espacio;
-    private Metodos_Encuesta puntaje;
 
     public Ventana_Encuesta() {
         setContentPane(panel1);
@@ -94,15 +93,6 @@ public class Ventana_Encuesta extends JFrame {
             }
         });
 
-        siguienteButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-               /* puntaje.reiniciopuntos();
-                Ventana_Inicial obj = new Ventana_Inicial();
-                obj.setVisible(true);
-                dispose();*/
-            }
-        });
     }
 }
 
