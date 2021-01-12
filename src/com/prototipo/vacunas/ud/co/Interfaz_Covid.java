@@ -4,6 +4,8 @@ import controlador.Controlador_encuesta;
 import controlador.Controlador_prin;
 import modelo.modelo_encuesta;
 import modelo.modelo_principal;
+import vista.Registro_Estudiante;
+import vista.Registro_Funcionario;
 import vista.Ventana_Encuesta;
 import vista.Ventana_Inicial;
 
@@ -16,6 +18,7 @@ public class Interfaz_Covid {
         modelo_principal obj = new modelo_principal();
         Controlador_prin poder = new Controlador_prin(obj,botones);
 
-
+        Registro_Funcionario objrf = new Registro_Funcionario();
+        Registro_Estudiante objre = new Registro_Estudiante();
     }
 }
