@@ -7,15 +7,15 @@ import java.awt.event.ActionListener;
 
 public class Ventana_Inicial extends JFrame {
     public JButton agregarVacunasButton;
-    private JButton quitarVacunasButton;
-    private JSpinner agg_vacunas;
-    private JSpinner remove_vac;
+    public JButton quitarVacunasButton;
+    public JSpinner agg_vacunas;
+    public JSpinner remove_vac;
     private JButton button3;
     private JButton registroFuncionariosButton;
     private JButton listaDeRegistradosButton;
     private JButton button6;
     private JPanel panel1;
-    private JLabel Vacunas;
+    public JLabel label_vacunas;
     public Ventana_Inicial() {
 
         setContentPane(panel1);
@@ -28,6 +28,12 @@ public class Ventana_Inicial extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // terminar proceso con la x
         this.setVisible(true);
 
+        quitarVacunasButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
     }
 
 }
