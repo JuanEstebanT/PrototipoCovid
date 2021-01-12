@@ -9,16 +9,13 @@ import vista.Registro_Funcionario;
 import vista.Ventana_Encuesta;
 import vista.Ventana_Inicial;
 
+import java.sql.Connection;
+
 public class Interfaz_Covid {
     public static void main(String[] args){
-        Ventana_Inicial botones = new Ventana_Inicial();
-        /*modelo_encuesta obj = new modelo_encuesta();
-        Ventana_Encuesta view_Ventana_encuesta = new Ventana_Encuesta();
-        Controlador_encuesta crtl = new Controlador_encuesta(view_Ventana_encuesta,obj);*/
-        modelo_principal obj = new modelo_principal();
-        Controlador_prin poder = new Controlador_prin(obj,botones);
+        Ventana_Inicial inicio = new Ventana_Inicial();
+        modelo_principal model = new modelo_principal();
+        Controlador_prin crtl = new Controlador_prin(model,inicio);
 
-        Registro_Funcionario objrf = new Registro_Funcionario();
-        Registro_Estudiante objre = new Registro_Estudiante();
     }
 }

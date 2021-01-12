@@ -10,12 +10,22 @@ public class Ventana_Inicial extends JFrame {
     public JButton quitarVacunasButton;
     public JSpinner agg_vacunas;
     public JSpinner remove_vac;
-    private JButton button3;
-    private JButton registroFuncionariosButton;
+    public JButton Regist_estButton;
+    public JButton registroFuncionariosButton;
     private JButton listaDeRegistradosButton;
     private JButton button6;
     private JPanel panel1;
     public JLabel label_vacunas;
+
+    public boolean isTipo_cargo() {
+        return Tipo_cargo;
+    }
+
+    public void setTipo_cargo(boolean tipo_cargo) {
+        Tipo_cargo = tipo_cargo;
+    }
+
+    public boolean Tipo_cargo;
     public Ventana_Inicial() {
 
         setContentPane(panel1);
@@ -33,6 +43,8 @@ public class Ventana_Inicial extends JFrame {
 
             }
         });
+
+
     }
 
 }

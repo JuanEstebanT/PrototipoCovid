@@ -49,8 +49,7 @@ public class Ventana_Encuesta extends JFrame {
     public JCheckBox ningunaDeLasAnterioresCheckBox;
     public JRadioButton ContactoButton1;
     public JRadioButton ContactoButton2;
-    public JButton puntajeButton;
-    private JButton siguienteButton;
+    public JButton siguienteButton;
     public JRadioButton ManosButton1;
     public JRadioButton ManosButton2;
     private JLabel Espacio;
@@ -65,33 +64,6 @@ public class Ventana_Encuesta extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // terminar proceso con la x
 
 
-        puntajeButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                /*puntaje.Personas_en_Hogar(PersonasButton1,Persona_1Button2,Personas_2Button3,Personas_3Button4);
-                puntaje.Personas_saliendo(SalirButton1,SalirButton2,SalirButton3,SalirButton4);
-                puntaje.Enfermedades_Res(EnfermedadButton1,EnfermedadButton2);
-                puntaje.Localidades(LocalidadesBox1);
-                puntaje.Contacto(ContactoButton1,ContactoButton2);
-                puntaje.Distancia(DistanciaButton1,DistanciaButton2);
-                puntaje.Edades(spinner1);
-                puntaje.Eventos(EventosButton1,EventosButton2);
-                puntaje.Manos(ManosButton1,ManosButton2);
-                puntaje.Ropa(RopaButton1,RopaButton2);
-                puntaje.Tapabocas(desechableButton,reutilizableButton);
-                puntaje.Trabajador(TrabajadorButton1,TrabajadorButton2);
-                puntaje.ViajeInt(ViajeIntButton1,ViajeIntButton2);
-                puntaje.ViajeNal(ViajeNalButton1,ViajeNalButton2);
-                puntaje.Transporte(TransporteButton1,TransporteButton2);
-                puntaje.DesinfectaManos(DesinfectaBox);
-                puntaje.LavaManos(LavaManoBox);
-                puntaje.LavaTapabocas(LavaTapabocasBox);
-                puntaje.ObjetosLimpios(ObjetosLimpiosBox);
-                puntaje.Enfermedades(fiebreCheckBox,tosCheckBox,dolorDeGargantaCheckBox,congestionCheckBox
-                ,fatigaCheckBox,dificultadParaRespirarCheckBox,escalofrioCheckBox,dolorDeMusculosCheckBox,ningunaDeLasAnterioresCheckBox);
-                JOptionPane.showMessageDialog(null,"puntaje: "+puntaje.Ultimos_puntos());*/
-            }
-        });
 
     }
 }

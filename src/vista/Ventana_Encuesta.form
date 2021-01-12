@@ -15,7 +15,7 @@
         <properties/>
         <border type="none"/>
         <children>
-          <grid id="89af9" layout-manager="GridLayoutManager" row-count="52" column-count="13" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="89af9" layout-manager="GridLayoutManager" row-count="54" column-count="13" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints/>
             <properties/>
@@ -775,17 +775,9 @@
                   <text value="3 o mas"/>
                 </properties>
               </component>
-              <component id="5b44f" class="javax.swing.JButton" binding="puntajeButton" default-binding="true">
-                <constraints>
-                  <grid row="51" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <text value="Obtener puntaje"/>
-                </properties>
-              </component>
               <component id="544f0" class="javax.swing.JButton" binding="siguienteButton" default-binding="true">
                 <constraints>
-                  <grid row="51" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <grid row="52" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <text value="Siguiente"/>
@@ -838,6 +830,24 @@
                 <properties>
                   <enabled value="false"/>
                   <text value="."/>
+                </properties>
+              </component>
+              <component id="51643" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="51" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <enabled value="false"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="319fb" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="53" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <enabled value="false"/>
+                  <text value=""/>
                 </properties>
               </component>
             </children>
