@@ -17,5 +17,7 @@ public class Interfaz_Covid {
         modelo_principal model = new modelo_principal();
         Controlador_prin crtl = new Controlador_prin(model,inicio);
 
+        conector obj = new conector();
+        obj.conxion();
     }
 }
