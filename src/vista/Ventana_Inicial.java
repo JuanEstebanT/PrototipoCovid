@@ -1,4 +1,6 @@
-package com.prototipo.vacunas.ud.co;
+package vista;
+
+import com.prototipo.vacunas.ud.co.Metodos_Encuesta;
 
 import javax.swing.*;
 import java.awt.*;
@@ -31,9 +33,9 @@ public class Ventana_Inicial extends JFrame {
         button3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Encuesta obj = new Encuesta(Method);
+                /*Encuesta obj = new Encuesta(Method);
                 obj.setVisible(true);
-                dispose();
+                dispose();*/
             }
         });
 
@@ -52,11 +54,5 @@ public class Ventana_Inicial extends JFrame {
             }
         });
     }
-    public void cerrar (){
-        this.setVisible(false);
-    }
 
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
-    }
 }

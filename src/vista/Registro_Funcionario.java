@@ -1,4 +1,4 @@
-package com.prototipo.vacunas.ud.co;
+package vista;
 
 import javax.swing.*;
 

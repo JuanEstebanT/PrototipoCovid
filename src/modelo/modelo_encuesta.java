@@ -1,44 +1,31 @@
-/*
- Esta clase es para conectar la interfaz de encuesta y la logica y con esta obtener un puntaje el cual
- se utilizara para la obtencion de la priorizacion de la vacuna para la persona
- */
-
-package com.prototipo.vacunas.ud.co;
+package modelo;
 
 import javax.swing.*;
 
-public class Metodos_Encuesta {
-      /**
+public class modelo_encuesta {
+    /**
      * Atributos
      */
-    int Puntos;
-    int ultimate_puntos;
+    static personas per = new personas();
 
-    /**
-     *  Ver puntos
-     * @return ver puntos
-     */
-    public String Puntaje_total(){
-        return "Puntos de riegos totales son: "+Puntos;
-    }
     /**
      * Edades es para sacar puntos segun en el rango de edad en la que esta
      * @param boton identifica el Jspinner
      */
 
-    public void Edades(JSpinner boton){
+    public static void Edades(JSpinner boton){
         int comparador;
         comparador = Integer.parseInt(boton.getValue().toString());
         if (comparador == 0 || comparador <= 18 ){
-            Puntos+= 1;
+            per.sumarpuntaje(1);
         }else if(comparador >= 19 && comparador <= 25){
-            Puntos +=2;
+            per.sumarpuntaje(2);
         }else if (comparador >= 26 && comparador <= 39){
-            Puntos += 3;
+            per.sumarpuntaje(3);
         }else if (comparador >= 39 && comparador <= 60){
-            Puntos +=4;
+            per.sumarpuntaje(4);
         }else if (comparador > 61){
-            Puntos +=5;
+            per.sumarpuntaje(5);
         }
         boton.setEnabled(false);
     }
@@ -50,18 +37,18 @@ public class Metodos_Encuesta {
      * @param boton3 Personas_2Button3
      * @param boton4 Personas_3Button4
      */
-    public void Personas_en_Hogar(JRadioButton boton1,JRadioButton boton2,JRadioButton boton3,JRadioButton boton4){
+    public static void Personas_en_Hogar(JRadioButton boton1, JRadioButton boton2, JRadioButton boton3, JRadioButton boton4){
         if(boton1.isSelected()){
-            Puntos += 0;
+            per.sumarpuntaje(0);
         }
         if(boton2.isSelected()){
-            Puntos += 1;
+            per.sumarpuntaje(1);
         }
         if(boton3.isSelected()){
-            Puntos += 2;
+            per.sumarpuntaje(2);
         }
         if(boton4.isSelected()){
-            Puntos += 3;
+            per.sumarpuntaje(3);
         }
         boton1.setEnabled(false);
         boton2.setEnabled(false);
@@ -76,18 +63,18 @@ public class Metodos_Encuesta {
      * @param boton3 SalirButton1
      * @param boton4 SalirButton1
      */
-    public void Personas_saliendo(JRadioButton boton1,JRadioButton boton2,JRadioButton boton3,JRadioButton boton4){
+    public static void Personas_saliendo(JRadioButton boton1, JRadioButton boton2, JRadioButton boton3, JRadioButton boton4){
         if(boton1.isSelected()){
-            Puntos += 1;
+            per.sumarpuntaje(1);
         }
         if(boton2.isSelected()){
-            Puntos += 2;
+            per.sumarpuntaje(2);
         }
         if(boton3.isSelected()){
-            Puntos += 3;
+            per.sumarpuntaje(3);
         }
         if(boton4.isSelected()){
-            Puntos += 5;
+            per.sumarpuntaje(5);
         }
         boton1.setEnabled(false);
         boton2.setEnabled(false);
@@ -99,28 +86,12 @@ public class Metodos_Encuesta {
      * @param boton1 EnfermedadButton1
      * @param boton2 EnfermedadButton2
      */
-    public void Enfermedades_Res(JRadioButton boton1,JRadioButton boton2){
+    public static void Enfermedades_Res(JRadioButton boton1, JRadioButton boton2){
         if(boton1.isSelected()){
-            Puntos += 5;
+            per.sumarpuntaje(5);
         }
         boton1.setEnabled(false);
         boton2.setEnabled(false);
-    }
-
-    /**
-     *  Reinicia los puntos
-     */
-    public void reiniciopuntos(){
-        Puntos = 0;
-    }
-
-    /**
-     * ultimos puntos guardados
-     * @return
-     */
-    public int Ultimos_puntos(){
-        ultimate_puntos = Puntos;
-        return ultimate_puntos;
     }
 
     /**
@@ -128,23 +99,23 @@ public class Metodos_Encuesta {
      * tienen un foco de contagio mayor
      * @param Box LocalidadesBox1
      */
-    public void Localidades(JComboBox Box){
+    public static void Localidades(JComboBox Box){
         String localidad;
         localidad = Box.getSelectedItem().toString();
         if (localidad == "11-Suba" || localidad == "08-Kennedy" || localidad == "10-Engativá" || localidad == "11-Suba"){
-            Puntos +=5;
+            per.sumarpuntaje(5);
         }
         if (localidad == "07-Bosa" || localidad == "19-Ciudad Bolívar" || localidad == "09-Fontibón" || localidad == "04-San Cristóbal"){
-            Puntos +=4;
+            per.sumarpuntaje(4);
         }
         if (localidad == "18-Rafael Uribe Uribe" || localidad == "16-Puente Aranda" || localidad == "02-Chapinero" || localidad == "05-Usme"){
-            Puntos +=3;
+            per.sumarpuntaje(3);
         }
         if (localidad == "13-Teusaquillo" || localidad == "12-Barrios Unidos" || localidad == "06-Tunjuelito" || localidad == "03-Santa Fe"){
-            Puntos +=2;
+            per.sumarpuntaje(2);
         }
         if (localidad == "14-Los Mártires" || localidad == "15-Antonio Nariño" || localidad == "17-La Candelaria" || localidad == "20-Sumapaz"|| localidad == "21-Fuera de Bogota"){
-            Puntos +=1;
+            per.sumarpuntaje(1);
         }
         Box.setEnabled(false);
     }
@@ -155,9 +126,9 @@ public class Metodos_Encuesta {
      * @param boton1
      * @param boton2
      */
-    public void Trabajador(JRadioButton boton1,JRadioButton boton2){
+    public static void Trabajador(JRadioButton boton1, JRadioButton boton2){
         if(boton1.isSelected()){
-            Puntos += 8;
+            per.sumarpuntaje(8);
         }
         boton1.setEnabled(false);
         boton2.setEnabled(false);
@@ -168,9 +139,9 @@ public class Metodos_Encuesta {
      * @param boton1
      * @param boton2
      */
-    public void Transporte(JRadioButton boton1,JRadioButton boton2){
+    public static void Transporte(JRadioButton boton1, JRadioButton boton2){
         if(boton1.isSelected()){
-            Puntos += 8;
+            per.sumarpuntaje(8);
         }
         boton1.setEnabled(false);
         boton2.setEnabled(false);
@@ -181,9 +152,9 @@ public class Metodos_Encuesta {
      * @param boton1
      * @param boton2
      */
-    public void Ropa(JRadioButton boton1,JRadioButton boton2){
+    public static void Ropa(JRadioButton boton1, JRadioButton boton2){
         if(boton2.isSelected()){
-            Puntos += 3;
+            per.sumarpuntaje(3);
         }
         boton1.setEnabled(false);
         boton2.setEnabled(false);
@@ -194,9 +165,9 @@ public class Metodos_Encuesta {
      * @param boton1
      * @param boton2
      */
-    public void ViajeInt(JRadioButton boton1,JRadioButton boton2){
+    public static void ViajeInt(JRadioButton boton1, JRadioButton boton2){
         if(boton1.isSelected()){
-            Puntos += 9;
+            per.sumarpuntaje(9);
         }
         boton1.setEnabled(false);
         boton2.setEnabled(false);
@@ -207,9 +178,9 @@ public class Metodos_Encuesta {
      * @param boton1
      * @param boton2
      */
-    public void ViajeNal(JRadioButton boton1,JRadioButton boton2){
+    public static void ViajeNal(JRadioButton boton1, JRadioButton boton2){
         if(boton1.isSelected()){
-            Puntos += 5;
+            per.sumarpuntaje(5);
         }
         boton1.setEnabled(false);
         boton2.setEnabled(false);
@@ -220,12 +191,12 @@ public class Metodos_Encuesta {
      * @param boton1
      * @param boton2
      */
-    public void Distancia(JRadioButton boton1,JRadioButton boton2){
+    public static void Distancia(JRadioButton boton1, JRadioButton boton2){
         if(boton1.isSelected()){
-            Puntos += 3;
+            per.sumarpuntaje(3);
         }
         if (boton2.isSelected()){
-            Puntos += 7;
+            per.sumarpuntaje(7);
         }
         boton1.setEnabled(false);
         boton2.setEnabled(false);
@@ -236,9 +207,9 @@ public class Metodos_Encuesta {
      * @param boton1
      * @param boton2
      */
-    public void Eventos(JRadioButton boton1,JRadioButton boton2){
+    public static void Eventos(JRadioButton boton1, JRadioButton boton2){
         if(boton1.isSelected()){
-            Puntos += 8;
+            per.sumarpuntaje(8);
         }
         boton1.setEnabled(false);
         boton2.setEnabled(false);
@@ -249,9 +220,9 @@ public class Metodos_Encuesta {
      * @param boton1
      * @param boton2
      */
-    public void Manos(JRadioButton boton1,JRadioButton boton2){
+    public static void Manos(JRadioButton boton1, JRadioButton boton2){
         if(boton2.isSelected()){
-            Puntos += 8;
+            per.sumarpuntaje(8);
         }
         boton1.setEnabled(false);
         boton2.setEnabled(false);
@@ -262,12 +233,12 @@ public class Metodos_Encuesta {
      * @param boton1
      * @param boton2
      */
-    public void Tapabocas(JRadioButton boton1,JRadioButton boton2){
+    public static void Tapabocas(JRadioButton boton1, JRadioButton boton2){
         if(boton1.isSelected()){
-            Puntos += 1;
+            per.sumarpuntaje(1);
         }
         if (boton2.isSelected()){
-            Puntos += 3;
+            per.sumarpuntaje(3);
         }
         boton1.setEnabled(false);
         boton2.setEnabled(false);
@@ -278,126 +249,154 @@ public class Metodos_Encuesta {
      * @param boton1
      * @param boton2
      */
-    public void Contacto(JRadioButton boton1,JRadioButton boton2){
+    public static void Contacto(JRadioButton boton1, JRadioButton boton2){
         if(boton1.isSelected()){
-            Puntos += 10;
+            per.sumarpuntaje(10);
         }
         boton1.setEnabled(false);
         boton2.setEnabled(false);
     }
 
-    public void LavaManos(JComboBox Box){
+    /**
+     * Da puntaje si no se lava las manos con frecuencia
+     * @param Box
+     */
+    public static void LavaManos(JComboBox Box){
         String frecuencia;
         frecuencia = Box.getSelectedItem().toString();
         if (frecuencia == "1. Siempre"){
-            Puntos += 1;
+            per.sumarpuntaje(1);
         }
         if (frecuencia == "2. Casi siempre"){
-            Puntos += 2;
+            per.sumarpuntaje(2);
         }
         if (frecuencia == "3. Frecuentemente"){
-            Puntos += 3;
+            per.sumarpuntaje(3);
         }
         if (frecuencia == "4. De vez en cuando"){
-            Puntos += 4;
+            per.sumarpuntaje(4);
         }
         if (frecuencia == "5. Nunca"){
-            Puntos += 8;
+            per.sumarpuntaje(8);
         }
         Box.setEnabled(false);
     }
 
-    public void DesinfectaManos(JComboBox Box){
+    /**
+     * Da puntos si no se desinfecta las manos
+     * @param Box
+     */
+    public static void DesinfectaManos(JComboBox Box){
         String frecuencia;
         frecuencia = Box.getSelectedItem().toString();
         if (frecuencia == "1. Siempre"){
-            Puntos += 1;
+            per.sumarpuntaje(1);
         }
         if (frecuencia == "2. Casi siempre"){
-            Puntos += 2;
+            per.sumarpuntaje(2);
         }
         if (frecuencia == "3. Frecuentemente"){
-            Puntos += 3;
+            per.sumarpuntaje(3);
         }
         if (frecuencia == "4. De vez en cuando"){
-            Puntos += 4;
+            per.sumarpuntaje(4);
         }
         if (frecuencia == "5. Nunca"){
-            Puntos += 8;
+            per.sumarpuntaje(8);
         }
         Box.setEnabled(false);
     }
 
-    public void ObjetosLimpios(JComboBox Box){
+    /**
+     * si no limpia sus objetos (desinfecta) obtiene puntos
+     * @param Box
+     */
+    public static void ObjetosLimpios(JComboBox Box){
         String frecuencia;
         frecuencia = Box.getSelectedItem().toString();
         if (frecuencia == "1. Siempre"){
-            Puntos += 2;
+            per.sumarpuntaje(1);
         }
         if (frecuencia == "2. Casi siempre"){
-            Puntos += 2;
+            per.sumarpuntaje(2);
         }
         if (frecuencia == "3. Frecuentemente"){
-            Puntos += 3;
+            per.sumarpuntaje(3);
         }
         if (frecuencia == "4. De vez en cuando"){
-            Puntos += 4;
+            per.sumarpuntaje(4);
         }
         if (frecuencia == "5. Nunca"){
-            Puntos += 8;
+            per.sumarpuntaje(8);
         }
         Box.setEnabled(false);
     }
 
-    public void LavaTapabocas(JComboBox Box){
+    /**
+     * Da puntaje si no lava el tapabocas
+     * @param Box
+     */
+    public static void LavaTapabocas(JComboBox Box){
         String frecuencia;
         frecuencia = Box.getSelectedItem().toString();
         if (frecuencia == "1. Siempre"){
-            Puntos += 1;
+            per.sumarpuntaje(1);
         }
         if (frecuencia == "2. Casi siempre"){
-            Puntos += 2;
+            per.sumarpuntaje(2);
         }
         if (frecuencia == "3. Frecuentemente"){
-            Puntos += 3;
+            per.sumarpuntaje(3);
         }
         if (frecuencia == "4. De vez en cuando"){
-            Puntos += 4;
+            per.sumarpuntaje(4);
         }
         if (frecuencia == "5. Nunca"){
-            Puntos += 8;
+            per.sumarpuntaje(8);
         }
         Box.setEnabled(false);
     }
 
-    public void Enfermedades(JCheckBox fiebre,JCheckBox tos,JCheckBox garganta
-            ,JCheckBox congestion,JCheckBox fatiga,JCheckBox respirar,JCheckBox frio,
-                             JCheckBox musculos,JCheckBox ninguna){
+    /**
+     * Da puntos segun los sintomas seleccionados
+     * @param fiebre
+     * @param tos
+     * @param garganta
+     * @param congestion
+     * @param fatiga
+     * @param respirar
+     * @param frio
+     * @param musculos
+     * @param ninguna
+     */
+    public static void Enfermedades(JCheckBox fiebre, JCheckBox tos, JCheckBox garganta
+            , JCheckBox congestion, JCheckBox fatiga, JCheckBox respirar, JCheckBox frio,
+                                    JCheckBox musculos, JCheckBox ninguna){
         if (fiebre.isSelected()){
-            Puntos += 9;
+            per.sumarpuntaje(9);
         }
         if (garganta.isSelected()){
-            Puntos += 8;
+            per.sumarpuntaje(8);
         }
         if (congestion.isSelected()){
-            Puntos += 6;
+            per.sumarpuntaje(7);
         }
         if (tos.isSelected()){
-            Puntos += 2;
+            per.sumarpuntaje(2);
         }if (respirar.isSelected()){
-            Puntos += 5;
+            per.sumarpuntaje(5);
         }
         if (fatiga.isSelected()){
-            Puntos += 1;
+            per.sumarpuntaje(1);
         }
         if (frio.isSelected()){
-            Puntos += 3;
+            per.sumarpuntaje(3);
         }
         if (musculos.isSelected()){
-            Puntos += 2;
+            per.sumarpuntaje(2);
         }
         if (ninguna.isSelected()){
-           fiebre.setEnabled(false);
+            fiebre.setEnabled(false);
             frio.setEnabled(false);
             congestion.setEnabled(false);
             musculos.setEnabled(false);
@@ -416,4 +415,8 @@ public class Metodos_Encuesta {
         respirar.setEnabled(false);
         ninguna.setEnabled(false);
     }
+    public static void getPuntos(){
+        JOptionPane.showMessageDialog(null,"Puntaje : "+per.getPuntaje());
+    }
 }
+
