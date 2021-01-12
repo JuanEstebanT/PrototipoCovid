@@ -1,13 +1,8 @@
 package vista;
 
-import com.prototipo.vacunas.ud.co.Metodos_Encuesta;
-
 import javax.swing.*;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.nio.file.attribute.GroupPrincipal;
 
 public class Ventana_Encuesta extends JFrame {
     public JRadioButton TrabajadorButton1;

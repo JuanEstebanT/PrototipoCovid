@@ -1,24 +1,19 @@
 package vista;
 
-import com.prototipo.vacunas.ud.co.Metodos_Encuesta;
-
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class Ventana_Inicial extends JFrame {
     private JButton agregarVacunasButton;
-    private JButton juanEsGeyButton;
-    private JSpinner spinner1;
-    private JSpinner spinner2;
+    private JButton quitarVacunasButton;
+    private JSpinner agg_vacunas;
+    private JSpinner remove_vac;
     private JButton button3;
     private JButton registroFuncionariosButton;
-    private JButton button5;
+    private JButton listaDeRegistradosButton;
     private JButton button6;
     private JPanel panel1;
     private JLabel Vacunas;
-    private Metodos_Encuesta Method;
     public Ventana_Inicial() {
 
         setContentPane(panel1);
@@ -30,29 +25,7 @@ public class Ventana_Inicial extends JFrame {
         getContentPane().setBackground(Color.CYAN); // backgraund
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // terminar proceso con la x
         this.setVisible(true);
-        button3.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                /*Encuesta obj = new Encuesta(Method);
-                obj.setVisible(true);
-                dispose();*/
-            }
-        });
-
-        agregarVacunasButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
-
-
-        juanEsGeyButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
+        Vacunas.setText("Cantidad de Vacunas disponibles: ");
     }
 
 }
