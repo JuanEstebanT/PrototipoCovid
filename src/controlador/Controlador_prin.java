@@ -20,6 +20,7 @@ public class Controlador_prin{
                 modelo_prin.add_vacunas(Integer.parseInt(view_prin.agg_vacunas.getValue().toString()));
                 modelo_prin.actualizaranucio(view_prin.label_vacunas);
             }
+
         });
         this.view_prin.quitarVacunasButton.addActionListener(new ActionListener() {
             @Override
