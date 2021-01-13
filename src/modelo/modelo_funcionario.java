@@ -22,7 +22,7 @@ public class modelo_funcionario extends conector{
             preparedStatement.setString(5, per.getCorreo());
             preparedStatement.setString(6, per.getFacultad());
             preparedStatement.setString(7, per.getCargo());
-            preparedStatement.setInt(8, per.getPuntaje());
+            preparedStatement.setInt(8, 2);
             preparedStatement.setString(9, per.getVacunado());
             preparedStatement.execute();
 

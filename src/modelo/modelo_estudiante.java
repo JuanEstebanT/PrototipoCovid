@@ -28,6 +28,7 @@ public class modelo_estudiante extends conector{
             statement.setString(7,per.getCargo());
             statement.setInt(8,per.getPuntaje());
             statement.setString(9,per.getVacunado());
+            return true;
         }catch(Exception a){
 
         System.err.println(a);
@@ -40,8 +41,5 @@ public class modelo_estudiante extends conector{
                 }
 
         }
-
-
-        return false;
     }
 }
