@@ -33,14 +33,10 @@ public class modelo_principal {
                 vacunas_covid.restarVacunas(CantidadQuitar);
                 nuevo = "Cantidad de vacunas es: "+ vacunas_covid.getVacunas_totales();
             }
-
         }
-
     }
 
     public void actualizaranucio (JLabel x){
         x.setText("Cantidad de vacunas disponibles :"+vacunas_covid.getVacunas_totales());
     }
-
-
 }

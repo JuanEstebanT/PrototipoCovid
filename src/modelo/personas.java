@@ -1,15 +1,19 @@
 package modelo;
 
 public class personas {
+
     private String nombre;
     private String codigo;
-    private char genero;
+    private String genero;
+    private String dirreccion;
     private String correo;
     private String facultad;
     private String cargo;
     private int puntaje;
+    private String vacunado;
     private int puntajeSum;
     private int resultado;
+
     public String getNombre() {
         return nombre;
     }
@@ -26,12 +30,20 @@ public class personas {
         this.codigo = codigo;
     }
 
-    public char getGenero() {
+    public String getGenero() {
         return genero;
     }
 
-    public void setGenero(char genero) {
+    public void setGenero(String genero) {
         this.genero = genero;
+    }
+
+    public String getDirreccion() {
+        return dirreccion;
+    }
+
+    public void setDirreccion(String direccion) {
+        this.dirreccion = direccion;
     }
 
     public String getCorreo() {
@@ -66,6 +78,14 @@ public class personas {
         this.puntaje = puntaje;
     }
 
+    public String getVacunado() {
+        return vacunado;
+    }
+
+    public void setVacunado(String vacunado) {
+        this.vacunado = vacunado;
+    }
+
     public int getPuntajeSum() {
         return puntajeSum;
     }
@@ -78,6 +98,7 @@ public class personas {
         this.puntajeSum = puntajeSum;
         this.puntaje += this.puntajeSum;
     }
+
     public void resetPuntaje(){
         this.puntaje = 0;
     }
