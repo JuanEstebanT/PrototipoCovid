@@ -2,15 +2,18 @@ package vista;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Registro_Estudiante extends JFrame{
-    private JTextField textField1;
-    private JTextField textField2;
-    private JButton siguienteButton;
+    public JTextField txt_nombreEst;
+    private JTextField txt_direccionEst;
+    public JButton finalizar_EstButton;
     private JComboBox comboBox1;
     private JComboBox comboBox2;
-    private JComboBox comboBox3;
+    private JComboBox box_generoEst;
     private JPanel panel1;
+    private JTextField txt_correoEst;
 
     public Registro_Estudiante (){
         setContentPane(panel1);
@@ -20,5 +23,7 @@ public class Registro_Estudiante extends JFrame{
         setTitle("Registro Estudiante");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setVisible(true);
+
+        }
     }
-}
+
