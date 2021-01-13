@@ -7,13 +7,14 @@ import java.awt.event.ActionListener;
 
 public class Registro_Estudiante extends JFrame{
     public JTextField txt_nombreEst;
-    private JTextField txt_direccionEst;
+    public  JTextField txt_direccionEst;
     public JButton finalizar_EstButton;
-    private JComboBox comboBox1;
-    private JComboBox comboBox2;
-    private JComboBox box_generoEst;
-    private JPanel panel1;
-    private JTextField txt_correoEst;
+    public JComboBox BoxFacultadEst;
+    public JComboBox BoxRenovacionEst;
+    public  JComboBox box_generoEst;
+    public  JPanel panel1;
+    public JTextField txt_correoEst;
+    public JTextField txt_codigoEst;
 
     public Registro_Estudiante (){
         setContentPane(panel1);
@@ -24,6 +25,8 @@ public class Registro_Estudiante extends JFrame{
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setVisible(true);
 
-        }
+
+        };
     }
+
 

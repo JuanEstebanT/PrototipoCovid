@@ -26,14 +26,22 @@ public class modelo_estudiante extends conector{
             statement.setString(5,per.getCorreo());
             statement.setString(6,per.getFacultad());
             statement.setString(7,per.getCargo());
-            statement.setString(8,per.getPuntaje());
+            statement.setInt(8,per.getPuntaje());
             statement.setString(9,per.getVacunado());
         }catch(Exception a){
 
-
+        System.err.println(a);
+        return false;
+        }finally {
+                try {
+                    conexion.close();
+                }catch(Exception a){
+                    System.err.println(a);
+                }
 
         }
 
 
+        return false;
     }
 }
