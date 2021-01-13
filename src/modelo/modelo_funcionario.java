@@ -18,7 +18,7 @@ public class modelo_funcionario extends conector{
             preparedStatement.setString(1, per.getCodigo());
             preparedStatement.setString(2, per.getNombre());
             preparedStatement.setString(3, per.getGenero());
-            preparedStatement.setString(4, per.getDirreccion());
+            preparedStatement.setString(4, per.getDireccion());
             preparedStatement.setString(5, per.getCorreo());
             preparedStatement.setString(6, per.getFacultad());
             preparedStatement.setString(7, per.getCargo());

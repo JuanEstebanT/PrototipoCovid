@@ -5,7 +5,7 @@ public class personas {
     private String nombre;
     private String codigo;
     private String genero;
-    private String dirreccion;
+    private String direccion;
     private String correo;
     private String facultad;
     private String cargo;
@@ -38,12 +38,12 @@ public class personas {
         this.genero = genero;
     }
 
-    public String getDirreccion() {
-        return dirreccion;
+    public String getDireccion() {
+        return direccion;
     }
 
-    public void setDirreccion(String direccion) {
-        this.dirreccion = direccion;
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
 
     public String getCorreo() {
