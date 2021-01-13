@@ -1,9 +1,9 @@
-package com.prototipo.vacunas.ud.co;
+package Main;
 import javax.swing.*;
 import java.sql.*;
 public class conector {
     Connection con;
-    public Connection conxion(){
+    public Connection conexion(){
 
         try{
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/covid_ud","root","");

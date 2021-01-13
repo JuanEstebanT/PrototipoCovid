@@ -1,15 +1,8 @@
-package com.prototipo.vacunas.ud.co;
+package Main;
 
-import controlador.Controlador_encuesta;
 import controlador.Controlador_prin;
-import modelo.modelo_encuesta;
 import modelo.modelo_principal;
-import vista.Registro_Estudiante;
-import vista.Registro_Funcionario;
-import vista.Ventana_Encuesta;
 import vista.Ventana_Inicial;
-
-import java.sql.Connection;
 
 public class Interfaz_Covid {
     public static void main(String[] args){
@@ -18,6 +11,6 @@ public class Interfaz_Covid {
         Controlador_prin crtl = new Controlador_prin(model,inicio);
 
         conector obj = new conector();
-        obj.conxion();
+        obj.conexion();
     }
 }

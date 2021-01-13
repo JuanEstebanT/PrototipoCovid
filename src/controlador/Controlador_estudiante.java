@@ -1,12 +1,11 @@
 package controlador;
 
-import com.prototipo.vacunas.ud.co.conector;
+import Main.conector;
 import modelo.modelo_estudiante;
 import modelo.modelo_principal;
 import vista.Registro_Estudiante;
 import vista.Ventana_Inicial;
 import java.sql.Connection;
-import java.sql.*;
 import java.sql.PreparedStatement;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -24,7 +23,7 @@ public class Controlador_estudiante {
             @Override
             public void actionPerformed(ActionEvent e) {
                 conector con = new conector();
-                Connection conexion =con.conxion();
+                Connection conexion =con.conexion();
                 try {
                     String query = "INSERT INTO datos_personas (Nombre) values(?)";
                     PreparedStatement statement = conexion.prepareStatement (query);
