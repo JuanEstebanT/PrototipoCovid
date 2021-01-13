@@ -9,7 +9,7 @@ public class modelo_funcionario extends conector{
     conector con = new conector();
     Connection conexion = con.conexion();
 
-    public boolean modelo_funcionario(personas per){
+    public boolean Registro_funcionario(personas per){
 
         String query = "INSERT INTO datos_personas (Codigo, Nombre, Genero, Dirreccion, Correo, Facultad, Cargo, Puntaje, Vacunado) VALUES (?,?,?,?,?,?,?,?,?)";
 

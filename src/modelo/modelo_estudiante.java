@@ -34,12 +34,11 @@ public class modelo_estudiante extends conector{
         System.err.println(a);
         return false;
         }finally {
-                try {
-                    conexion.close();
-                }catch(Exception a){
-                    System.err.println(a);
-                }
-
+            try {
+                conexion.close();
+            }catch(Exception a){
+                System.err.println(a);
+            }
         }
     }
 }

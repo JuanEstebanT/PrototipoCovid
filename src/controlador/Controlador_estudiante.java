@@ -18,12 +18,11 @@ public class Controlador_estudiante {
     private modelo_estudiante objme;
     private Registro_Estudiante objre;
 
-
     public Controlador_estudiante(Registro_Estudiante objre, modelo_estudiante objme, personas objp){
         this.objre= objre;
         this.objme= objme;
         this.objp = objp;
-        this.objre.finalizar_EstButton.addActionListener(new ActionListener() {
+        this.objre.finalizar_EstButton.addActionListener((new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(e.getSource()== objre.finalizar_EstButton){
@@ -37,14 +36,16 @@ public class Controlador_estudiante {
                     objp.setCargo("Estudiante");
                     objp.setVacunado("No vacunado");
 
-                    JOptionPane.showMessageDialog(null, "Registro Exitoso");
+                    if(objme.RegistrarEst(objp)){
+                        JOptionPane.showMessageDialog(null, "Registro exitoso");
+                    }else{
+                        JOptionPane.showMessageDialog(null, "Error al guardar");
+                    }
                 }
-
             }
-
-} );
-}
-        public void iniciar (){
+        }));
+    }
+    public void iniciar (){
         objre.setVisible(true);
-        }
+    }
 }
