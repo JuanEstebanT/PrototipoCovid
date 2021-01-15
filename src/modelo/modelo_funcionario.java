@@ -11,7 +11,7 @@ public class modelo_funcionario extends conector{
 
     public boolean Registro_funcionario(personas per){
 
-        String query = "INSERT INTO datos_personas (Codigo, Nombre, Genero, Dirreccion, Correo, Facultad, Cargo, Puntaje, Vacunado) VALUES (?,?,?,?,?,?,?,?,?)";
+        String query = "INSERT INTO datos_personas (Codigo, Nombre, Genero, Direccion, Correo, Facultad, Cargo, Puntaje, Vacunado) VALUES (?,?,?,?,?,?,?,?,?)";
 
         try{
             PreparedStatement preparedStatement = conexion().prepareStatement(query);
@@ -22,9 +22,9 @@ public class modelo_funcionario extends conector{
             preparedStatement.setString(5, per.getCorreo());
             preparedStatement.setString(6, per.getFacultad());
             preparedStatement.setString(7, per.getCargo());
-            preparedStatement.setInt(8, 2);
+            preparedStatement.setInt(8, per.getPuntaje());
             preparedStatement.setString(9, per.getVacunado());
-            preparedStatement.execute();
+            preparedStatement.executeUpdate();
 
             return true;
         }catch(Exception a){

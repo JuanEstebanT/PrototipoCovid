@@ -11,14 +11,15 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class modelo_estudiante extends conector{
+
     conector con = new conector();
-    Connection conexion =con.conexion();
+    Connection conexion = con.conexion();
 
     public boolean RegistrarEst (personas per){
-
+        String query = "INSERT INTO datos_personas (Codigo, Nombre, Genero, Direccion, Correo, Facultad, Cargo, Puntaje, Vacunado) values(?,?,?,?,?,?,?,?,?)";
         try{
-            String query = "INSERT INTO datos_personas (Codigo, Nombre, Genero, Direccion, Correo, Facultad, Cargo, Puntaje, Vacunado) values(?????????)";
-            PreparedStatement statement = conexion.prepareStatement (query);
+
+            PreparedStatement statement = conexion().prepareStatement (query);
             statement.setString(1,per.getCodigo());
             statement.setString(2,per.getNombre());
             statement.setString(3,per.getGenero());
@@ -28,6 +29,7 @@ public class modelo_estudiante extends conector{
             statement.setString(7,per.getCargo());
             statement.setInt(8,per.getPuntaje());
             statement.setString(9,per.getVacunado());
+            statement.executeUpdate();
             return true;
         }catch(Exception a){
 

@@ -23,7 +23,6 @@ public class Registro_Funcionario extends JFrame{
         setLocationRelativeTo(null);
         setTitle("Registro Funcionario");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setVisible(true);
     }
 }
 

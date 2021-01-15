@@ -17,15 +17,16 @@ public class Controlador_estudiante {
     private personas objp;
     private modelo_estudiante objme;
     private Registro_Estudiante objre;
+    private Ventana_Inicial ventana_in;
 
-    public Controlador_estudiante(Registro_Estudiante objre, modelo_estudiante objme, personas objp){
+    public Controlador_estudiante(Registro_Estudiante objre, modelo_estudiante objme, personas objp,Ventana_Inicial ventana_in){
         this.objre= objre;
         this.objme= objme;
         this.objp = objp;
+        this.ventana_in = ventana_in;
         this.objre.finalizar_EstButton.addActionListener((new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(e.getSource()== objre.finalizar_EstButton){
 
                     objp.setCodigo (objre.txt_codigoEst.getText());
                     objp.setNombre (objre.txt_nombreEst.getText());
@@ -41,8 +42,10 @@ public class Controlador_estudiante {
                     }else{
                         JOptionPane.showMessageDialog(null, "Error al guardar");
                     }
+                    ventana_in.setVisible(true);
+                    objre.dispose();
                 }
-            }
+
         }));
     }
     public void iniciar (){

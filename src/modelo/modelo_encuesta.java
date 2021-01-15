@@ -6,15 +6,16 @@ public class modelo_encuesta {
     /**
      * Atributos
      */
-    static personas per = new personas();
+    personas per;
 
     /**
      * Edades es para sacar puntos segun en el rango de edad en la que esta
      * @param boton identifica el Jspinner
      */
 
-    public static void Edades(JSpinner boton){
+    public void Edades(JSpinner boton,personas per){
         int comparador;
+        this.per = per;
         comparador = Integer.parseInt(boton.getValue().toString());
         if (comparador == 0 || comparador <= 18 ){
             per.sumarpuntaje(1);
@@ -37,7 +38,8 @@ public class modelo_encuesta {
      * @param boton3 Personas_2Button3
      * @param boton4 Personas_3Button4
      */
-    public static void Personas_en_Hogar(JRadioButton boton1, JRadioButton boton2, JRadioButton boton3, JRadioButton boton4){
+    public void Personas_en_Hogar(JRadioButton boton1, JRadioButton boton2, JRadioButton boton3, JRadioButton boton4,personas per){
+        this.per = per;
         if(boton1.isSelected()){
             per.sumarpuntaje(0);
         }
@@ -63,7 +65,8 @@ public class modelo_encuesta {
      * @param boton3 SalirButton1
      * @param boton4 SalirButton1
      */
-    public static void Personas_saliendo(JRadioButton boton1, JRadioButton boton2, JRadioButton boton3, JRadioButton boton4){
+    public void Personas_saliendo(JRadioButton boton1, JRadioButton boton2, JRadioButton boton3, JRadioButton boton4,personas per){
+        this.per = per;
         if(boton1.isSelected()){
             per.sumarpuntaje(1);
         }
@@ -86,7 +89,8 @@ public class modelo_encuesta {
      * @param boton1 EnfermedadButton1
      * @param boton2 EnfermedadButton2
      */
-    public static void Enfermedades_Res(JRadioButton boton1, JRadioButton boton2){
+    public void Enfermedades_Res(JRadioButton boton1, JRadioButton boton2,personas per){
+        this.per = per;
         if(boton1.isSelected()){
             per.sumarpuntaje(5);
         }
@@ -99,7 +103,8 @@ public class modelo_encuesta {
      * tienen un foco de contagio mayor
      * @param Box LocalidadesBox1
      */
-    public static void Localidades(JComboBox Box){
+    public void Localidades(JComboBox Box,personas per){
+        this.per = per;
         String localidad;
         localidad = Box.getSelectedItem().toString();
         if (localidad == "11-Suba" || localidad == "08-Kennedy" || localidad == "10-Engativá" || localidad == "11-Suba"){
@@ -126,7 +131,8 @@ public class modelo_encuesta {
      * @param boton1
      * @param boton2
      */
-    public static void Trabajador(JRadioButton boton1, JRadioButton boton2){
+    public void Trabajador(JRadioButton boton1, JRadioButton boton2,personas per){
+        this.per = per;
         if(boton1.isSelected()){
             per.sumarpuntaje(8);
         }
@@ -139,7 +145,8 @@ public class modelo_encuesta {
      * @param boton1
      * @param boton2
      */
-    public static void Transporte(JRadioButton boton1, JRadioButton boton2){
+    public void Transporte(JRadioButton boton1, JRadioButton boton2,personas per){
+        this.per = per;
         if(boton1.isSelected()){
             per.sumarpuntaje(8);
         }
@@ -152,7 +159,8 @@ public class modelo_encuesta {
      * @param boton1
      * @param boton2
      */
-    public static void Ropa(JRadioButton boton1, JRadioButton boton2){
+    public void Ropa(JRadioButton boton1, JRadioButton boton2,personas per){
+        this.per = per;
         if(boton2.isSelected()){
             per.sumarpuntaje(3);
         }
@@ -165,7 +173,8 @@ public class modelo_encuesta {
      * @param boton1
      * @param boton2
      */
-    public static void ViajeInt(JRadioButton boton1, JRadioButton boton2){
+    public void ViajeInt(JRadioButton boton1, JRadioButton boton2,personas per){
+        this.per = per;
         if(boton1.isSelected()){
             per.sumarpuntaje(9);
         }
@@ -178,7 +187,8 @@ public class modelo_encuesta {
      * @param boton1
      * @param boton2
      */
-    public static void ViajeNal(JRadioButton boton1, JRadioButton boton2){
+    public void ViajeNal(JRadioButton boton1, JRadioButton boton2,personas per){
+        this.per = per;
         if(boton1.isSelected()){
             per.sumarpuntaje(5);
         }
@@ -191,7 +201,8 @@ public class modelo_encuesta {
      * @param boton1
      * @param boton2
      */
-    public static void Distancia(JRadioButton boton1, JRadioButton boton2){
+    public void Distancia(JRadioButton boton1, JRadioButton boton2,personas per){
+        this.per = per;
         if(boton1.isSelected()){
             per.sumarpuntaje(3);
         }
@@ -207,7 +218,8 @@ public class modelo_encuesta {
      * @param boton1
      * @param boton2
      */
-    public static void Eventos(JRadioButton boton1, JRadioButton boton2){
+    public void Eventos(JRadioButton boton1, JRadioButton boton2,personas per){
+        this.per = per;
         if(boton1.isSelected()){
             per.sumarpuntaje(8);
         }
@@ -220,7 +232,8 @@ public class modelo_encuesta {
      * @param boton1
      * @param boton2
      */
-    public static void Manos(JRadioButton boton1, JRadioButton boton2){
+    public void Manos(JRadioButton boton1, JRadioButton boton2,personas per){
+        this.per = per;
         if(boton2.isSelected()){
             per.sumarpuntaje(8);
         }
@@ -233,7 +246,8 @@ public class modelo_encuesta {
      * @param boton1
      * @param boton2
      */
-    public static void Tapabocas(JRadioButton boton1, JRadioButton boton2){
+    public void Tapabocas(JRadioButton boton1, JRadioButton boton2,personas per){
+        this.per = per;
         if(boton1.isSelected()){
             per.sumarpuntaje(1);
         }
@@ -249,7 +263,8 @@ public class modelo_encuesta {
      * @param boton1
      * @param boton2
      */
-    public static void Contacto(JRadioButton boton1, JRadioButton boton2){
+    public void Contacto(JRadioButton boton1, JRadioButton boton2,personas per){
+        this.per = per;
         if(boton1.isSelected()){
             per.sumarpuntaje(10);
         }
@@ -261,7 +276,8 @@ public class modelo_encuesta {
      * Da puntaje si no se lava las manos con frecuencia
      * @param Box
      */
-    public static void LavaManos(JComboBox Box){
+    public void LavaManos(JComboBox Box,personas per){
+        this.per = per;
         String frecuencia;
         frecuencia = Box.getSelectedItem().toString();
         if (frecuencia == "1. Siempre"){
@@ -286,7 +302,8 @@ public class modelo_encuesta {
      * Da puntos si no se desinfecta las manos
      * @param Box
      */
-    public static void DesinfectaManos(JComboBox Box){
+    public void DesinfectaManos(JComboBox Box,personas per){
+        this.per = per;
         String frecuencia;
         frecuencia = Box.getSelectedItem().toString();
         if (frecuencia == "1. Siempre"){
@@ -311,7 +328,8 @@ public class modelo_encuesta {
      * si no limpia sus objetos (desinfecta) obtiene puntos
      * @param Box
      */
-    public static void ObjetosLimpios(JComboBox Box){
+    public void ObjetosLimpios(JComboBox Box,personas per){
+        this.per = per;
         String frecuencia;
         frecuencia = Box.getSelectedItem().toString();
         if (frecuencia == "1. Siempre"){
@@ -336,7 +354,8 @@ public class modelo_encuesta {
      * Da puntaje si no lava el tapabocas
      * @param Box
      */
-    public static void LavaTapabocas(JComboBox Box){
+    public void LavaTapabocas(JComboBox Box,personas per){
+        this.per = per;
         String frecuencia;
         frecuencia = Box.getSelectedItem().toString();
         if (frecuencia == "1. Siempre"){
@@ -369,9 +388,10 @@ public class modelo_encuesta {
      * @param musculos
      * @param ninguna
      */
-    public static void Enfermedades(JCheckBox fiebre, JCheckBox tos, JCheckBox garganta
+    public void Enfermedades(JCheckBox fiebre, JCheckBox tos, JCheckBox garganta
             , JCheckBox congestion, JCheckBox fatiga, JCheckBox respirar, JCheckBox frio,
-                                    JCheckBox musculos, JCheckBox ninguna){
+                                    JCheckBox musculos, JCheckBox ninguna,personas per){
+        this.per = per;
         if (fiebre.isSelected()){
             per.sumarpuntaje(9);
         }
@@ -415,7 +435,8 @@ public class modelo_encuesta {
         respirar.setEnabled(false);
         ninguna.setEnabled(false);
     }
-    public static void getPuntos(){
+
+    public void getPuntos(){
         JOptionPane.showMessageDialog(null,"Puntaje : "+per.getPuntaje());
     }
 }

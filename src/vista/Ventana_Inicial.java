@@ -37,13 +37,6 @@ public class Ventana_Inicial extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // terminar proceso con la x
         this.setVisible(true);
 
-        quitarVacunasButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
-
 
     }
 

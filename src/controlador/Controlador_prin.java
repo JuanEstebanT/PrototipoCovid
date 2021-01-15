@@ -3,6 +3,7 @@ package controlador;
 import modelo.Vacunas_Covid;
 import modelo.modelo_encuesta;
 import modelo.modelo_principal;
+import modelo.personas;
 import vista.Ventana_Encuesta;
 import vista.Ventana_Inicial;
 
@@ -13,9 +14,11 @@ public class Controlador_prin{
     private modelo_principal modelo_prin;
     private Ventana_Inicial view_prin;
     private Vacunas_Covid vacun;
-    public Controlador_prin(modelo_principal modelo,Ventana_Inicial view){
-        this.modelo_prin = modelo;
-        this.view_prin = view;
+    private personas per;
+    public Controlador_prin(modelo_principal modelo_prin,Ventana_Inicial view_prin,personas per){
+        this.modelo_prin = modelo_prin;
+        this.view_prin = view_prin;
+        this.per = per;
         this.view_prin.agregarVacunasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -36,7 +39,7 @@ public class Controlador_prin{
             public void actionPerformed(ActionEvent e) {
                 modelo_encuesta obj = new modelo_encuesta();
                 Ventana_Encuesta view_Ventana_encuesta = new Ventana_Encuesta();
-                Controlador_encuesta crtl = new Controlador_encuesta(view_Ventana_encuesta,obj,view_prin);
+                Controlador_encuesta crtl = new Controlador_encuesta(view_Ventana_encuesta,obj,per,view_prin);
                 view_prin.dispose();
                 view_prin.setTipo_cargo(true);
             }
@@ -46,7 +49,7 @@ public class Controlador_prin{
             public void actionPerformed(ActionEvent e) {
                 modelo_encuesta obj = new modelo_encuesta();
                 Ventana_Encuesta view_Ventana_encuesta = new Ventana_Encuesta();
-                Controlador_encuesta crtl = new Controlador_encuesta(view_Ventana_encuesta,obj,view_prin);
+                Controlador_encuesta crtl = new Controlador_encuesta(view_Ventana_encuesta,obj,per,view_prin);
                 view_prin.dispose();
                 view_prin.setTipo_cargo(false);
             }

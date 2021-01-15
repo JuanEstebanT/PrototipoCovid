@@ -89,7 +89,9 @@
           <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <model/>
+          <model>
+            <item value="Masculino"/>
+          </model>
         </properties>
       </component>
       <component id="a3322" class="javax.swing.JButton" binding="button_finalizarFun">
@@ -121,7 +123,9 @@
           <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <model/>
+          <model>
+            <item value="Ingenieria"/>
+          </model>
         </properties>
       </component>
       <component id="51a5" class="javax.swing.JComboBox" binding="box_cargoFun">
@@ -129,7 +133,9 @@
           <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <model/>
+          <model>
+            <item value="Profesor"/>
+          </model>
         </properties>
       </component>
       <component id="ac939" class="javax.swing.JLabel">
