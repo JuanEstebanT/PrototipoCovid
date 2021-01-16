@@ -14,11 +14,9 @@ import vista.Ventana_Inicial;
  */
 
 public class Controlador_encuesta{
-    private final Ventana_Encuesta vista_enc;
 
     public Controlador_encuesta(Ventana_Encuesta vista_enc, modelo_encuesta modelo_enc,personas per,Ventana_Inicial ventana_in){
-        this.vista_enc = vista_enc;
-        this.vista_enc.siguienteButton.addActionListener(e -> {
+        vista_enc.siguienteButton.addActionListener(e -> {
             modelo_enc.Personas_en_Hogar(vista_enc.PersonasButton1,vista_enc.Persona_1Button2,vista_enc.Personas_2Button3,vista_enc.Personas_3Button4,per);
             modelo_enc.Personas_saliendo(vista_enc.SalirButton1,vista_enc.SalirButton2,vista_enc.SalirButton3,vista_enc.SalirButton4,per);
             modelo_enc.Enfermedades_Res(vista_enc.EnfermedadButton1,vista_enc.EnfermedadButton2,per);
@@ -41,7 +39,8 @@ public class Controlador_encuesta{
             modelo_enc.Enfermedades(vista_enc.fiebreCheckBox,vista_enc.tosCheckBox,vista_enc.dolorDeGargantaCheckBox,vista_enc.congestionCheckBox
                     ,vista_enc.fatigaCheckBox,vista_enc.dificultadParaRespirarCheckBox,vista_enc.escalofrioCheckBox,vista_enc.dolorDeMusculosCheckBox,vista_enc.ningunaDeLasAnterioresCheckBox,per);
             modelo_enc.getPuntos();
-            //E los siguientes if, se identifica si es un registro para estudiante o funcionario y se abre la ventana correspondiente
+
+            //En los siguientes if, se identifica si es un registro para estudiante o funcionario y se abre la ventana correspondiente
             if(ventana_in.isTipo_cargo()){
                 Registro_Estudiante estudiante = new Registro_Estudiante();
                 modelo_estudiante model = new modelo_estudiante();

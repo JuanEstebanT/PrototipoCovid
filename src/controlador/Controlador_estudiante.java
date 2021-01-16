@@ -5,20 +5,20 @@ import modelo.personas;
 import vista.Registro_Estudiante;
 import vista.Ventana_Inicial;
 import javax.swing.*;
+import java.util.Objects;
 
 public class Controlador_estudiante {
-    private final Registro_Estudiante objre;
 
     public Controlador_estudiante(Registro_Estudiante objre, modelo_estudiante objme, personas objp,Ventana_Inicial ventana_in){
-        this.objre= objre;
-        this.objre.finalizar_EstButton.addActionListener((e -> {
+        objre.finalizar_EstButton.addActionListener((e -> {
 
+            //Se guardan los datos de los campos de texto en la ventana  en la base de datos
             objp.setCodigo (objre.txt_codigoEst.getText());
             objp.setNombre (objre.txt_nombreEst.getText());
-            objp.setGenero (objre.box_generoEst.getSelectedItem().toString());
+            objp.setGenero (Objects.requireNonNull(objre.box_generoEst.getSelectedItem()).toString());
             objp.setDireccion(objre.txt_direccionEst.getText());
             objp.setCorreo(objre.txt_correoEst.getText());
-            objp.setFacultad(objre.BoxFacultadEst.getSelectedItem().toString());
+            objp.setFacultad(Objects.requireNonNull(objre.BoxFacultadEst.getSelectedItem()).toString());
             objp.setCargo("Estudiante");
             objp.setVacunado("No vacunado");
 
@@ -28,7 +28,7 @@ public class Controlador_estudiante {
                 JOptionPane.showMessageDialog(null, "Error al guardar");
             }
             ventana_in.setVisible(true);
-            objre.dispose();
+            objre.dispose(); //el dispose se usa para cerrar la ventana anterior
         }));
     }
 }
