@@ -29,7 +29,7 @@ public class Ventana_Inicial extends JFrame {
     public Ventana_Inicial() {
 
         setContentPane(panel1);
-        setSize(450,250); // Tamaño
+        setSize(600,250); // Tamaño
         setResizable(false); // No maximizar ni Minimizar
         setLocationRelativeTo(null); // ubicación en el centro
         setVisible(true); // visible la ventana
