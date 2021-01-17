@@ -12,7 +12,7 @@ public class Ventana_Inicial extends JFrame {
     public JSpinner remove_vac;
     public JButton Regist_estButton;
     public JButton registroFuncionariosButton;
-    private JButton listaDeRegistradosButton;
+    public JButton listaDeRegistradosButton;
     private JButton VacunarButton;
     private JPanel panel1;
     public JLabel label_vacunas;

@@ -2,34 +2,45 @@ package vista;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class Ventana_listados extends JFrame{
     private JPanel panel1;
-    private JTable jtPersonas;
-    private JTextField txt_nombreMDF;
-    private JTextField txt_codigoMDF;
-    private JTextField txt_generoMDF;
-    private JTextField txt_direccionMDF;
-    private JTextField txt_correoMDF;
-    private JTextField txt_facultadMDF;
-    private JTextField txt_cargoMDF;
-    private JTextField txt_puntajeMDF;
-    private JTextField txt_vacunadoMDF;
-    private JTextField txt_buscarMDF;
-    private JButton buscarButton;
-    private JButton modificarButton;
-    private JButton eliminarButton;
+    public JTable jtPersonas;
+    public JTextField txt_nombreMDF;
+    public JTextField txt_codigoMDF;
+    public JTextField txt_generoMDF;
+    public JTextField txt_direccionMDF;
+    public JTextField txt_correoMDF;
+    public JTextField txt_facultadMDF;
+    public JTextField txt_cargoMDF;
+    public JTextField txt_puntajeMDF;
+    public JTextField txt_vacunadoMDF;
+    public JTextField txt_buscarMDF;
+    public JButton buscarButton;
+    public JButton modificarButton;
+    public JButton eliminarButton;
+    public JLabel label_statusMDF;
+    public JButton regresarButton;
+
     public  Ventana_listados(){
         setContentPane(panel1);
         setSize(950,750);
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
+        setTitle("JDJ Covidapp");
+
+
+
     }
     private void createUIComponents() {
         jtPersonas = new JTable();
         Object[][] data = {};
-        String[] titles = {"Codigo","Nombre","Correo","Cargo","Facultad"};
+        String[] titles = {"Codigo","Nombre","Correo","Facultad","Cargo"};
         jtPersonas.setModel(new DefaultTableModel(data,titles));
     }
 }

@@ -1,10 +1,15 @@
 package controlador;
 
 import modelo.modelo_encuesta;
+import modelo.modelo_listados;
 import modelo.modelo_principal;
 import modelo.personas;
 import vista.Ventana_Encuesta;
 import vista.Ventana_Inicial;
+import vista.Ventana_listados;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Controlador_prin{
 
@@ -38,6 +43,14 @@ public class Controlador_prin{
             Controlador_encuesta crtl = new Controlador_encuesta(view_Ventana_encuesta,obj,per,view_prin);
             view_prin.dispose();
             view_prin.setTipo_cargo(false);
+        });
+        view_prin.listaDeRegistradosButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                modelo_listados model = new modelo_listados();
+                Ventana_listados view = new Ventana_listados();
+                Controlador_listados crtl = new Controlador_listados(model,view,per,view_prin);
+            }
         });
     }
 }
