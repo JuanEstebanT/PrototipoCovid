@@ -18,7 +18,7 @@ public class Registro_Estudiante extends JFrame{
 
     public Registro_Estudiante (){
         setContentPane(panel1);
-        setSize(500, 300);
+        setSize(600, 300);
         setResizable(false);
         setLocationRelativeTo(null);
         setTitle("Registro Estudiante");

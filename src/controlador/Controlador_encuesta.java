@@ -44,14 +44,14 @@ public class Controlador_encuesta{
             if(ventana_in.isTipo_cargo()){
                 Registro_Estudiante estudiante = new Registro_Estudiante();
                 modelo_estudiante model = new modelo_estudiante();
-                Controlador_estudiante crtl = new Controlador_estudiante(estudiante,model,per,ventana_in);
+                new Controlador_estudiante(estudiante,model,per,ventana_in);
                 estudiante.setVisible(true);
                 vista_enc.dispose();
             }
             if(!ventana_in.isTipo_cargo()){
                 Registro_Funcionario funcionario = new Registro_Funcionario();
                 modelo_funcionario model = new modelo_funcionario();
-                Controlador_funcionario crtl = new Controlador_funcionario(per,model,funcionario,ventana_in);
+                new Controlador_funcionario(per,model,funcionario,ventana_in);
                 funcionario.setVisible(true);
                 vista_enc.dispose();
             }

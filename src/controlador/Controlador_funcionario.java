@@ -24,11 +24,10 @@ public class Controlador_funcionario {
 
             if(objm.Registro_funcionario(objp)){
                 JOptionPane.showMessageDialog(null, "Registro exitoso");
-                objp.resetPuntaje();
             }else{
                 JOptionPane.showMessageDialog(null, "Error al guardar");
-                objp.resetPuntaje();
             }
+            objp.resetPuntaje();
 
             ventana_in.setVisible(true);
             objr.dispose();

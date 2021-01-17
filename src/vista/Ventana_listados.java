@@ -28,7 +28,7 @@ public class Ventana_listados extends JFrame{
 
     public  Ventana_listados(){
         setContentPane(panel1);
-        setSize(950,750);
+        setSize(1000,750);
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);

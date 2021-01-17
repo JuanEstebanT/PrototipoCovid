@@ -24,11 +24,10 @@ public class Controlador_estudiante {
 
             if(objme.RegistrarEst(objp)){
                 JOptionPane.showMessageDialog(null, "Registro exitoso");
-                objp.resetPuntaje();
             }else{
                 JOptionPane.showMessageDialog(null, "Error al guardar");
-                objp.resetPuntaje();
             }
+            objp.resetPuntaje();
 
             ventana_in.setVisible(true);
             objre.dispose(); //el dispose se usa para cerrar la ventana anterior
