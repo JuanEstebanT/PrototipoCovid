@@ -27,6 +27,7 @@ public class Controlador_estudiante {
             }else{
                 JOptionPane.showMessageDialog(null, "Error al guardar");
             }
+
             ventana_in.setVisible(true);
             objre.dispose(); //el dispose se usa para cerrar la ventana anterior
         }));
