@@ -5,7 +5,7 @@ import javax.swing.table.DefaultTableModel;
 
 public class Ventana_listados extends JFrame{
     private JPanel panel1;
-    private JTable jtpersonas;
+    private JTable jtPersonas;
     private JTextField txt_nombreMDF;
     private JTextField txt_codigoMDF;
     private JTextField txt_generoMDF;
@@ -27,9 +27,9 @@ public class Ventana_listados extends JFrame{
         setLocationRelativeTo(null);
     }
     private void createUIComponents() {
-        jtpersonas = new JTable();
+        jtPersonas = new JTable();
         Object[][] data = {};
         String[] titles = {"Codigo","Nombre","Correo","Cargo","Facultad"};
-        jtpersonas.setModel(new DefaultTableModel(data,titles));
+        jtPersonas.setModel(new DefaultTableModel(data,titles));
     }
 }

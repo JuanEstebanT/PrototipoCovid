@@ -15,7 +15,7 @@
         <properties/>
         <border type="none"/>
         <children>
-          <component id="1c805" class="javax.swing.JTable" binding="jtpersonas" custom-create="true">
+          <component id="1c805" class="javax.swing.JTable" binding="jtPersonas" custom-create="true">
             <constraints/>
             <properties/>
           </component>
