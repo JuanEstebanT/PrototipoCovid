@@ -1,10 +1,11 @@
 package vista;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 
-public class Ventana_listados {
+public class Ventana_listados extends JFrame{
     private JPanel panel1;
-    private JTable table1;
+    private JTable jtpersonas;
     private JTextField txt_nombreMDF;
     private JTextField txt_codigoMDF;
     private JTextField txt_generoMDF;
@@ -18,4 +19,17 @@ public class Ventana_listados {
     private JButton buscarButton;
     private JButton modificarButton;
     private JButton eliminarButton;
+    public  Ventana_listados(){
+        setContentPane(panel1);
+        setSize(950,750);
+        setVisible(true);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+    }
+    private void createUIComponents() {
+        jtpersonas = new JTable();
+        Object[][] data = {};
+        String[] titles = {"Codigo","Nombre","Correo","Cargo","Facultad"};
+        jtpersonas.setModel(new DefaultTableModel(data,titles));
+    }
 }

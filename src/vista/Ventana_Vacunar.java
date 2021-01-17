@@ -7,4 +7,5 @@ public class Ventana_Vacunar {
     private JButton Vacunar_vacunarbutton;
     private JTextField textField1;
     private JButton Vacunar_buscarbutton;
+
 }
