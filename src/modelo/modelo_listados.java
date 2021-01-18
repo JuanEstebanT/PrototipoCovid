@@ -2,8 +2,6 @@ package modelo;
 
 import Main.conector;
 import vista.Ventana_listados;
-
-import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.sql.*;
 

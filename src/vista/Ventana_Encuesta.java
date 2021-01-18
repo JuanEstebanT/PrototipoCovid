@@ -1,8 +1,6 @@
 package vista;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class Ventana_Encuesta extends JFrame {
     public JRadioButton TrabajadorButton1;

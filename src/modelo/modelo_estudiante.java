@@ -1,14 +1,8 @@
 package modelo;
 
 import Main.conector;
-import modelo.modelo_estudiante;
-import modelo.modelo_principal;
-import vista.Registro_Estudiante;
-import vista.Ventana_Inicial;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class modelo_estudiante extends conector{
 

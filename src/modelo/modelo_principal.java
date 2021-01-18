@@ -1,7 +1,5 @@
 package modelo;
 
-import vista.Ventana_Inicial;
-
 import javax.swing.*;
 
 public class modelo_principal {

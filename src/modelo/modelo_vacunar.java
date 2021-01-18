@@ -1,12 +1,11 @@
 package modelo;
+
 import Main.conector;
 import vista.Ventana_Vacunar; //llama a la ventana vacunar con los datos que estan alli
 import controlador.Controlador_Vacunar;   //llama a el controlador vacunar con los datos que estan alli
-
 import java.sql.*;
 import javax.swing.table.DefaultTableModel;
 import javax.xml.transform.Result;
-
 
 public class modelo_vacunar extends conector {
     conector con = new conector();

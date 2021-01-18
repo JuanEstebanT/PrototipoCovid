@@ -1,8 +1,10 @@
 package modelo;
 
 import javax.swing.*;
+import java.util.Objects;
 
 public class modelo_encuesta {
+
     /**
      * Atributos
      */
@@ -12,18 +14,17 @@ public class modelo_encuesta {
      * Edades es para sacar puntos segun en el rango de edad en la que esta
      * @param boton identifica el Jspinner
      */
-
     public void Edades(JSpinner boton,personas per){
         int comparador;
         this.per = per;
         comparador = Integer.parseInt(boton.getValue().toString());
-        if (comparador == 0 || comparador <= 18 ){
+        if (comparador <= 18){
             per.sumarpuntaje(1);
-        }else if(comparador >= 19 && comparador <= 25){
+        }else if(comparador <= 25){
             per.sumarpuntaje(2);
-        }else if (comparador >= 26 && comparador <= 39){
+        }else if (comparador <= 39){
             per.sumarpuntaje(3);
-        }else if (comparador >= 39 && comparador <= 60){
+        }else if (comparador <= 60){
             per.sumarpuntaje(4);
         }else if (comparador > 61){
             per.sumarpuntaje(5);
@@ -84,6 +85,7 @@ public class modelo_encuesta {
         boton3.setEnabled(false);
         boton4.setEnabled(false);
     }
+
     /**
      * Enfermedades_Res dar puntaje de riesgo si sufre de enfermedades respiratorias
      * @param boton1 EnfermedadButton1
@@ -106,20 +108,20 @@ public class modelo_encuesta {
     public void Localidades(JComboBox Box,personas per){
         this.per = per;
         String localidad;
-        localidad = Box.getSelectedItem().toString();
-        if (localidad == "11-Suba" || localidad == "08-Kennedy" || localidad == "10-Engativá" || localidad == "11-Suba"){
+        localidad = Objects.requireNonNull(Box.getSelectedItem()).toString();
+        if (localidad.equals("11-Suba") || localidad.equals("08-Kennedy") || localidad.equals("10-Engativá")){
             per.sumarpuntaje(5);
         }
-        if (localidad == "07-Bosa" || localidad == "19-Ciudad Bolívar" || localidad == "09-Fontibón" || localidad == "04-San Cristóbal"){
+        if (localidad.equals("07-Bosa") || localidad.equals("19-Ciudad Bolívar") || localidad.equals("09-Fontibón") || localidad.equals("04-San Cristóbal")){
             per.sumarpuntaje(4);
         }
-        if (localidad == "18-Rafael Uribe Uribe" || localidad == "16-Puente Aranda" || localidad == "02-Chapinero" || localidad == "05-Usme"){
+        if (localidad.equals("18-Rafael Uribe Uribe") || localidad.equals("16-Puente Aranda") || localidad.equals("02-Chapinero") || localidad.equals("05-Usme")){
             per.sumarpuntaje(3);
         }
-        if (localidad == "13-Teusaquillo" || localidad == "12-Barrios Unidos" || localidad == "06-Tunjuelito" || localidad == "03-Santa Fe"){
+        if (localidad.equals("13-Teusaquillo") || localidad.equals("12-Barrios Unidos") || localidad.equals("06-Tunjuelito") || localidad.equals("03-Santa Fe")){
             per.sumarpuntaje(2);
         }
-        if (localidad == "14-Los Mártires" || localidad == "15-Antonio Nariño" || localidad == "17-La Candelaria" || localidad == "20-Sumapaz"|| localidad == "21-Fuera de Bogota"){
+        if (localidad.equals("14-Los Mártires") || localidad.equals("15-Antonio Nariño") || localidad.equals("17-La Candelaria") || localidad.equals("20-Sumapaz") || localidad.equals("21-Fuera de Bogota")){
             per.sumarpuntaje(1);
         }
         Box.setEnabled(false);
@@ -279,20 +281,20 @@ public class modelo_encuesta {
     public void LavaManos(JComboBox Box,personas per){
         this.per = per;
         String frecuencia;
-        frecuencia = Box.getSelectedItem().toString();
-        if (frecuencia == "1. Siempre"){
+        frecuencia = Objects.requireNonNull(Box.getSelectedItem()).toString();
+        if (frecuencia.equals("1. Siempre")){
             per.sumarpuntaje(1);
         }
-        if (frecuencia == "2. Casi siempre"){
+        if (frecuencia.equals("2. Casi siempre")){
             per.sumarpuntaje(2);
         }
-        if (frecuencia == "3. Frecuentemente"){
+        if (frecuencia.equals("3. Frecuentemente")){
             per.sumarpuntaje(3);
         }
-        if (frecuencia == "4. De vez en cuando"){
+        if (frecuencia.equals("4. De vez en cuando")){
             per.sumarpuntaje(4);
         }
-        if (frecuencia == "5. Nunca"){
+        if (frecuencia.equals("5. Nunca")){
             per.sumarpuntaje(8);
         }
         Box.setEnabled(false);
@@ -305,20 +307,20 @@ public class modelo_encuesta {
     public void DesinfectaManos(JComboBox Box,personas per){
         this.per = per;
         String frecuencia;
-        frecuencia = Box.getSelectedItem().toString();
-        if (frecuencia == "1. Siempre"){
+        frecuencia = Objects.requireNonNull(Box.getSelectedItem()).toString();
+        if (frecuencia.equals("1. Siempre")){
             per.sumarpuntaje(1);
         }
-        if (frecuencia == "2. Casi siempre"){
+        if (frecuencia.equals("2. Casi siempre")){
             per.sumarpuntaje(2);
         }
-        if (frecuencia == "3. Frecuentemente"){
+        if (frecuencia.equals("3. Frecuentemente")){
             per.sumarpuntaje(3);
         }
-        if (frecuencia == "4. De vez en cuando"){
+        if (frecuencia.equals("4. De vez en cuando")){
             per.sumarpuntaje(4);
         }
-        if (frecuencia == "5. Nunca"){
+        if (frecuencia.equals("5. Nunca")){
             per.sumarpuntaje(8);
         }
         Box.setEnabled(false);
@@ -331,20 +333,20 @@ public class modelo_encuesta {
     public void ObjetosLimpios(JComboBox Box,personas per){
         this.per = per;
         String frecuencia;
-        frecuencia = Box.getSelectedItem().toString();
-        if (frecuencia == "1. Siempre"){
+        frecuencia = Objects.requireNonNull(Box.getSelectedItem()).toString();
+        if (frecuencia.equals("1. Siempre")){
             per.sumarpuntaje(1);
         }
-        if (frecuencia == "2. Casi siempre"){
+        if (frecuencia.equals("2. Casi siempre")){
             per.sumarpuntaje(2);
         }
-        if (frecuencia == "3. Frecuentemente"){
+        if (frecuencia.equals("3. Frecuentemente")){
             per.sumarpuntaje(3);
         }
-        if (frecuencia == "4. De vez en cuando"){
+        if (frecuencia.equals("4. De vez en cuando")){
             per.sumarpuntaje(4);
         }
-        if (frecuencia == "5. Nunca"){
+        if (frecuencia.equals("5. Nunca")){
             per.sumarpuntaje(8);
         }
         Box.setEnabled(false);
@@ -357,20 +359,20 @@ public class modelo_encuesta {
     public void LavaTapabocas(JComboBox Box,personas per){
         this.per = per;
         String frecuencia;
-        frecuencia = Box.getSelectedItem().toString();
-        if (frecuencia == "1. Siempre"){
+        frecuencia = Objects.requireNonNull(Box.getSelectedItem()).toString();
+        if (frecuencia.equals("1. Siempre")){
             per.sumarpuntaje(1);
         }
-        if (frecuencia == "2. Casi siempre"){
+        if (frecuencia.equals("2. Casi siempre")){
             per.sumarpuntaje(2);
         }
-        if (frecuencia == "3. Frecuentemente"){
+        if (frecuencia.equals("3. Frecuentemente")){
             per.sumarpuntaje(3);
         }
-        if (frecuencia == "4. De vez en cuando"){
+        if (frecuencia.equals("4. De vez en cuando")){
             per.sumarpuntaje(4);
         }
-        if (frecuencia == "5. Nunca"){
+        if (frecuencia.equals("5. Nunca")){
             per.sumarpuntaje(8);
         }
         Box.setEnabled(false);

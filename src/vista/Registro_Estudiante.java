@@ -1,9 +1,6 @@
 package vista;
 
 import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class Registro_Estudiante extends JFrame{
     public JTextField txt_nombreEst;
@@ -25,8 +22,7 @@ public class Registro_Estudiante extends JFrame{
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setVisible(true);
 
-
-        };
-    }
+     }
+}
 
 
