@@ -29,10 +29,8 @@ public class Ventana_listados extends JFrame{
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setTitle("JDJ Covidapp");
-
-
-
     }
+
     private void createUIComponents() {
         jtPersonas = new JTable();
         Object[][] data = {};

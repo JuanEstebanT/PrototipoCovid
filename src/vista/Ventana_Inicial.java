@@ -10,7 +10,7 @@ public class Ventana_Inicial extends JFrame {
     public JButton Regist_estButton;
     public JButton registroFuncionariosButton;
     public JButton listaDeRegistradosButton;
-    private JButton VacunarButton;
+    public JButton VacunarButton;
     private JPanel panel1;
     public JLabel label_vacunas;
 
@@ -33,9 +33,6 @@ public class Ventana_Inicial extends JFrame {
         setTitle("JDJ Covidapp"); // poner titulo
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // terminar proceso con la x
         this.setVisible(true);
-
-
-
     }
 
 }

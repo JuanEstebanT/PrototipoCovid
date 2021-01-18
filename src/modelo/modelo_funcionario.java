@@ -3,6 +3,7 @@ package modelo;
 import Main.conector;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class modelo_funcionario extends conector{
 
@@ -27,13 +28,13 @@ public class modelo_funcionario extends conector{
             preparedStatement.executeUpdate();
 
             return true;
-        }catch(Exception a){
+        }catch(SQLException a){
             System.err.println(a);
             return false;
         }finally {
             try{
                 conexion.close();
-            }catch (Exception a){
+            }catch (SQLException a){
                 System.err.println(a);
             }
         }

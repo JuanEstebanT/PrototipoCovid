@@ -8,6 +8,7 @@ import java.sql.*;
 public class modelo_listados extends conector {
     conector con = new conector();
     Connection conexion = con.conexion();
+
     private Ventana_listados ventana_lis;
 
     public boolean isEtiqueta_null() {
@@ -52,14 +53,16 @@ public class modelo_listados extends conector {
             rs = ps.executeQuery();
 
             ResultSetMetaData rsMD = rs.getMetaData();
-                int cantidadColumnas = rsMD.getColumnCount();
-                    while (rs.next()) {
-                        Object[] filas = new Object[cantidadColumnas];
-                        for (int i = 0; i < cantidadColumnas; i++) {
-                            filas[i] = rs.getObject(i + 1);
-                        }
-                        modelo_table.addRow(filas);
-                    }
+            int cantidadColumnas = rsMD.getColumnCount();
+
+            while (rs.next()) {
+                Object[] filas = new Object[cantidadColumnas];
+                for (int i = 0; i < cantidadColumnas; i++) {
+                    filas[i] = rs.getObject(i + 1);
+                }
+                modelo_table.addRow(filas);
+            }
+
             rs = ps.executeQuery();
             if(rs.next()){
                 ventana_lis.label_statusMDF.setText("Registro encontrado");

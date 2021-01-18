@@ -3,6 +3,7 @@ package modelo;
 import Main.conector;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class modelo_estudiante extends conector{
 
@@ -25,14 +26,14 @@ public class modelo_estudiante extends conector{
             statement.setString(9,per.getVacunado());
             statement.executeUpdate();
             return true;
-        }catch(Exception a){
+        }catch(SQLException a){
 
         System.err.println(a);
         return false;
         }finally {
             try {
                 conexion.close();
-            }catch(Exception a){
+            }catch(SQLException a){
                 System.err.println(a);
             }
         }

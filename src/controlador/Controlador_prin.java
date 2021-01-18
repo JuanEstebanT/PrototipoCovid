@@ -1,12 +1,10 @@
 package controlador;
 
-import modelo.modelo_encuesta;
-import modelo.modelo_listados;
-import modelo.modelo_principal;
-import modelo.personas;
+import modelo.*;
 import vista.Ventana_Encuesta;
 import vista.Ventana_Inicial;
 import vista.Ventana_listados;
+import vista.Vista_vacunar;
 
 public class Controlador_prin{
 
@@ -41,10 +39,19 @@ public class Controlador_prin{
             view_prin.dispose();
             view_prin.setTipo_cargo(false);
         });
+
+        //Activa el boton de lista de registrados
         view_prin.listaDeRegistradosButton.addActionListener(e -> {
             modelo_listados model = new modelo_listados();
             Ventana_listados view = new Ventana_listados();
             new Controlador_listados(model,view,per,view_prin);
+        });
+
+        //Activa el boton de vacunar
+        view_prin.VacunarButton.addActionListener(e -> {
+            Modelo_vacunar model = new Modelo_vacunar();
+            Vista_vacunar vista = new Vista_vacunar();
+            new Controlador_vacunar(model,vista);
         });
     }
 }
