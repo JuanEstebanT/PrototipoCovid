@@ -13,6 +13,7 @@ public class Ventana_Inicial extends JFrame {
     public JButton VacunarButton;
     private JPanel panel1;
     public JLabel label_vacunas;
+    private JButton Plan_button;
 
     public boolean isTipo_cargo() {
         return Tipo_cargo;
