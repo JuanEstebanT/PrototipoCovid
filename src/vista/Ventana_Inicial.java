@@ -1,6 +1,8 @@
 package vista;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Ventana_Inicial extends JFrame {
     public JButton agregarVacunasButton;
@@ -13,7 +15,7 @@ public class Ventana_Inicial extends JFrame {
     public JButton VacunarButton;
     private JPanel panel1;
     public JLabel label_vacunas;
-    private JButton Plan_button;
+    public JButton Plan_button;
 
     public boolean isTipo_cargo() {
         return Tipo_cargo;
@@ -35,5 +37,4 @@ public class Ventana_Inicial extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // terminar proceso con la x
         this.setVisible(true);
     }
-
 }

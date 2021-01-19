@@ -5,6 +5,7 @@ import vista.Ventana_Encuesta;
 import vista.Ventana_Inicial;
 import vista.Ventana_listados;
 import vista.Vista_vacunar;
+import vista.ventana_planVacunacion;
 
 public class Controlador_prin{
 
@@ -52,6 +53,11 @@ public class Controlador_prin{
             Modelo_vacunar model = new Modelo_vacunar();
             Vista_vacunar vista = new Vista_vacunar();
             new Controlador_vacunar(model,vista);
+        });
+
+        view_prin.Plan_button.addActionListener(e -> {
+            ventana_planVacunacion viewj = new ventana_planVacunacion();
+            new Controlador_Plan_vacunas(viewj);
         });
     }
 }

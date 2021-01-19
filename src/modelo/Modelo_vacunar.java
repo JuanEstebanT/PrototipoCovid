@@ -2,7 +2,6 @@ package modelo;
 
 import Main.conector;
 import vista.Vista_vacunar;
-
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
 import java.sql.*;
