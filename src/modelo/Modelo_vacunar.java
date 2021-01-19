@@ -2,25 +2,32 @@ package modelo;
 
 import Main.conector;
 import vista.Vista_vacunar;
+
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
 import java.sql.*;
 
 public class Modelo_vacunar extends conector {
 
     conector con = new conector();
     Connection conexion = con.conexion();
-    DefaultTableModel modelo;
+    DefaultTableModel modelo = new DefaultTableModel();
 
-    public void Vista_vacunos(Vista_vacunar vista){
+    public void Vista_vacunos(Vista_vacunar vista_v){
 
         try{
-            modelo = new DefaultTableModel();
-            vista.vacunar_table.setModel(modelo);
+
+            TableRowSorter<DefaultTableModel> sorter = new TableRowSorter<>(modelo);
+            vista_v.vacunar_table.setRowSorter(sorter);
+
             PreparedStatement ps;
             ResultSet rs;
             String query = "Select Codigo, Nombre, Genero, Direccion, Correo, Facultad, Cargo, Puntaje, Vacunado FROM datos_personas";
             ps = conexion.prepareStatement(query);
             rs = ps.executeQuery();
+
+            vista_v.vacunar_table.setModel(modelo);
+            vista_v.vacunar_table.setRowSorter(sorter);
 
             ResultSetMetaData rsmd = rs.getMetaData();
             int columnas = rsmd.getColumnCount();
