@@ -3,10 +3,7 @@ package modelo;
 import Main.conector;
 
 import javax.swing.*;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class modelo_principal extends conector{
 
@@ -28,9 +25,8 @@ public class modelo_principal extends conector{
                 rs = ps.executeQuery();
                 if (rs.next()) {
                     Vac_actuales = rs.getInt("NumeroVacunas");
-                    JOptionPane.showMessageDialog(null, "OK : " + Vac_actuales);
                 } else {
-                    JOptionPane.showMessageDialog(null, "Jueputaputa" + Vac_actuales);
+                    System.err.println("Error");
                 }
             } catch (SQLException a) {
                 a.printStackTrace();
