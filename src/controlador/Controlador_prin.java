@@ -46,6 +46,7 @@ public class Controlador_prin{
             modelo_listados model = new modelo_listados();
             Ventana_listados view = new Ventana_listados();
             new Controlador_listados(model,view,per,view_prin);
+            view_prin.dispose();
         });
 
         //Activa el boton de vacunar
