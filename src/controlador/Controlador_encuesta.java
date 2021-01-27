@@ -38,6 +38,7 @@ public class Controlador_encuesta{
             modelo_enc.ObjetosLimpios(vista_enc.ObjetosLimpiosBox,per);
             modelo_enc.Enfermedades(vista_enc.fiebreCheckBox,vista_enc.tosCheckBox,vista_enc.dolorDeGargantaCheckBox,vista_enc.congestionCheckBox
                     ,vista_enc.fatigaCheckBox,vista_enc.dificultadParaRespirarCheckBox,vista_enc.escalofrioCheckBox,vista_enc.dolorDeMusculosCheckBox,vista_enc.ningunaDeLasAnterioresCheckBox,per);
+            modelo_enc.Temperarura(vista_enc.txt_temperatura,per);
             modelo_enc.getPuntos();
 
             //En los siguientes if, se identifica si es un registro para estudiante o funcionario y se abre la ventana correspondiente

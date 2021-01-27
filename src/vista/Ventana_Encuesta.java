@@ -51,6 +51,7 @@ public class Ventana_Encuesta extends JFrame {
     public JRadioButton ManosButton1;
     public JRadioButton ManosButton2;
     private JLabel Espacio;
+    public JTextField txt_temperatura;
 
     public Ventana_Encuesta() {
         setContentPane(panel1);

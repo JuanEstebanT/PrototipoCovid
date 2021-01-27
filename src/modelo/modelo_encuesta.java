@@ -282,19 +282,19 @@ public class modelo_encuesta {
         this.per = per;
         String frecuencia;
         frecuencia = Objects.requireNonNull(Box.getSelectedItem()).toString();
-        if (frecuencia.equals("1. Siempre")){
+        if (frecuencia.equals("1. Cada 20 minutos")){
             per.sumarpuntaje(1);
         }
-        if (frecuencia.equals("2. Casi siempre")){
+        if (frecuencia.equals("2. 10 veces al dia")){
             per.sumarpuntaje(2);
         }
-        if (frecuencia.equals("3. Frecuentemente")){
+        if (frecuencia.equals("3. 5 veces al dia")){
             per.sumarpuntaje(3);
         }
-        if (frecuencia.equals("4. De vez en cuando")){
+        if (frecuencia.equals("4. 3 veces al dia")){
             per.sumarpuntaje(4);
         }
-        if (frecuencia.equals("5. Nunca")){
+        if (frecuencia.equals("5. 1 vez al dia")){
             per.sumarpuntaje(8);
         }
         Box.setEnabled(false);
@@ -308,19 +308,19 @@ public class modelo_encuesta {
         this.per = per;
         String frecuencia;
         frecuencia = Objects.requireNonNull(Box.getSelectedItem()).toString();
-        if (frecuencia.equals("1. Siempre")){
+        if (frecuencia.equals("1. Cada 20 minutos")){
             per.sumarpuntaje(1);
         }
-        if (frecuencia.equals("2. Casi siempre")){
+        if (frecuencia.equals("2. 10 veces al dia")){
             per.sumarpuntaje(2);
         }
-        if (frecuencia.equals("3. Frecuentemente")){
+        if (frecuencia.equals("3. 5 veces al dia")){
             per.sumarpuntaje(3);
         }
-        if (frecuencia.equals("4. De vez en cuando")){
+        if (frecuencia.equals("4. 3 veces al dia")){
             per.sumarpuntaje(4);
         }
-        if (frecuencia.equals("5. Nunca")){
+        if (frecuencia.equals("5. 1 vez al dia")){
             per.sumarpuntaje(8);
         }
         Box.setEnabled(false);
@@ -334,19 +334,19 @@ public class modelo_encuesta {
         this.per = per;
         String frecuencia;
         frecuencia = Objects.requireNonNull(Box.getSelectedItem()).toString();
-        if (frecuencia.equals("1. Siempre")){
+        if (frecuencia.equals("1. Cada 20 minutos")){
             per.sumarpuntaje(1);
         }
-        if (frecuencia.equals("2. Casi siempre")){
+        if (frecuencia.equals("2. 10 veces al dia")){
             per.sumarpuntaje(2);
         }
-        if (frecuencia.equals("3. Frecuentemente")){
+        if (frecuencia.equals("3. 5 veces al dia")){
             per.sumarpuntaje(3);
         }
-        if (frecuencia.equals("4. De vez en cuando")){
+        if (frecuencia.equals("4. 3 veces al dia")){
             per.sumarpuntaje(4);
         }
-        if (frecuencia.equals("5. Nunca")){
+        if (frecuencia.equals("5. 1 vez al dia")){
             per.sumarpuntaje(8);
         }
         Box.setEnabled(false);
@@ -360,19 +360,19 @@ public class modelo_encuesta {
         this.per = per;
         String frecuencia;
         frecuencia = Objects.requireNonNull(Box.getSelectedItem()).toString();
-        if (frecuencia.equals("1. Siempre")){
+        if (frecuencia.equals(" 1. Todos los dias")){
             per.sumarpuntaje(1);
         }
-        if (frecuencia.equals("2. Casi siempre")){
+        if (frecuencia.equals("2. Dia de pormedio")){
             per.sumarpuntaje(2);
         }
-        if (frecuencia.equals("3. Frecuentemente")){
+        if (frecuencia.equals("3. 3 veces a la semana")){
             per.sumarpuntaje(3);
         }
-        if (frecuencia.equals("4. De vez en cuando")){
+        if (frecuencia.equals("4. 1 vez a la semana")){
             per.sumarpuntaje(4);
         }
-        if (frecuencia.equals("5. Nunca")){
+        if (frecuencia.equals(" 5. 1 vez cada 15 dias")){
             per.sumarpuntaje(8);
         }
         Box.setEnabled(false);
@@ -436,6 +436,21 @@ public class modelo_encuesta {
         fatiga.setEnabled(false);
         respirar.setEnabled(false);
         ninguna.setEnabled(false);
+    }
+
+    /**
+     * Temperatura da puntos según la temperatura que registre la persona
+     * @param temp
+     * @param per
+     */
+    public void Temperarura(JTextField temp,personas per){
+        this.per = per;
+        float Grados = Integer.parseInt(temp.getText().trim());
+        if(Grados < 37){
+           per.sumarpuntaje(1);
+        }else if (Grados>37.1){
+            per.sumarpuntaje(5);
+        }
     }
 
     public void getPuntos(){
