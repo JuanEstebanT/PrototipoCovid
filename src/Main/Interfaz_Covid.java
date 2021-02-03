@@ -2,6 +2,7 @@ package Main;
 
 // Para importar las clases
 import controlador.Controlador_prin;
+import modelo.modelo_planVac;
 import modelo.modelo_principal;
 import vista.Ventana_Inicial;
 import modelo.personas;
@@ -12,5 +13,6 @@ public class Interfaz_Covid {
         modelo_principal model = new modelo_principal();
         personas per = new personas();
         new Controlador_prin(model,inicio,per); //Para darle accion a los botones
+
     }
 }

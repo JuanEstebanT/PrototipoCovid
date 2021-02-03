@@ -6,8 +6,6 @@ import javax.swing.*;
 import java.sql.*;
 
 public class modelo_principal extends conector{
-
-    Vacunas_Covid vacunas_covid = new Vacunas_Covid();
     private String nuevo;
     conector con = new conector();
     Connection conexion = con.conexion();
@@ -43,8 +41,7 @@ public class modelo_principal extends conector{
                 rs = ps.executeQuery();
                 nuevo = "Cantidad de vacunas es: " + rs.getInt("NumeroVacunas");
             } catch (SQLException b) {
-
-
+                b.printStackTrace();
             }
         }
 
@@ -90,7 +87,7 @@ public class modelo_principal extends conector{
         }
     }
 
-    public void actualizaranucio (JLabel x){
+    public void actualizaranucio (JLabel label_status){
         try {
             PreparedStatement ps = null;
             ResultSet rs = null;
@@ -98,7 +95,7 @@ public class modelo_principal extends conector{
             ps = conexion.prepareStatement(query);
             rs=ps.executeQuery();
             if(rs.next()){
-                x.setText("Cantidad de vacunas es: "+ rs.getInt("NumeroVacunas"));
+                label_status.setText("Cantidad de vacunas es: "+ rs.getInt("NumeroVacunas"));
             }
 
         } catch (SQLException E) {
