@@ -51,7 +51,7 @@ public class Controlador_prin{
         view_prin.VacunarButton.addActionListener(e -> {
             Modelo_vacunar model = new Modelo_vacunar();
             Vista_vacunar vista = new Vista_vacunar();
-            new Controlador_vacunar(model,vista);
+            new Controlador_vacunar(model,vista,view_prin);
             view_prin.dispose();
         });
 
@@ -75,7 +75,8 @@ public class Controlador_prin{
             }else if(seleccion == 1){
                 Ventana_Planes view = new Ventana_Planes();
                 modelo_planes model = new modelo_planes();
-                Controlador_planes ctrl = new Controlador_planes(view,model);
+                Controlador_planes ctrl = new Controlador_planes(view,model,view_prin);
+                view_prin.dispose();
             }else if(seleccion == 2){
 
             }

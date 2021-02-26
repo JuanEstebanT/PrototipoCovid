@@ -1,6 +1,7 @@
 package modelo;
 
 import Main.conector;
+import vista.Ventana_Planes;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

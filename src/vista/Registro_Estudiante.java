@@ -21,7 +21,6 @@ public class Registro_Estudiante extends JFrame{
         setTitle("Registro Estudiante");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setVisible(true);
-
      }
 }
 

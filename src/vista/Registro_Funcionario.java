@@ -15,7 +15,7 @@ public class Registro_Funcionario extends JFrame{
 
     public Registro_Funcionario (){
         setContentPane(panel1);
-        setSize(430, 285);
+        setSize(460, 285);
         setResizable(false);
         setLocationRelativeTo(null);
         setTitle("Registro Funcionario");

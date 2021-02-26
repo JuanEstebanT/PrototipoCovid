@@ -21,7 +21,7 @@ public class modelo_planes extends conector {
         try {
             ps = conexion.prepareStatement(query);
             rs = ps.executeQuery(query);
-            ventana_planes.table1.setModel(modelo);
+            ventana_planes.table_planes.setModel(modelo);
             ResultSetMetaData rsmd = rs.getMetaData();
             int columnas = rsmd.getColumnCount();
             modelo.addColumn("Planes");
@@ -59,5 +59,22 @@ public class modelo_planes extends conector {
             a.printStackTrace();
         }
 
+    }
+    public boolean eliminar_data(Ventana_Planes ventanaPlanes){
+        PreparedStatement ps = null;
+        try {
+            String Plan= "";
+            int fila = ventanaPlanes.table_planes.getSelectedRow();
+            Plan = ventanaPlanes.table_planes.getValueAt(fila,0).toString();
+            System.out.println(Plan);
+            ps=conexion.prepareStatement("DELETE FROM planes_vacunas WHERE Planes = ?");
+            ps.setString(1,Plan);
+            ps.execute();
+            modelo.removeRow(fila);
+            return true;
+        }catch (SQLException a){
+            a.printStackTrace();
+            return false;
+        }
     }
 }

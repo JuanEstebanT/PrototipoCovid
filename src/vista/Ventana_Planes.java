@@ -2,17 +2,17 @@ package vista;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Ventana_Planes extends JFrame{
     private JPanel panel1;
-    public JTable table1;
+    public JTable table_planes;
     public JButton eliminarButton;
     public JLabel txt_primera;
     public JLabel txt_segunda;
     public JLabel txt_tercera;
-    private JButton regresarButton;
+    public JButton regresarButton;
 
     public Ventana_Planes(){
         setContentPane(panel1);
@@ -22,12 +22,11 @@ public class Ventana_Planes extends JFrame{
         setLocationRelativeTo(null);
         setTitle("Lista de prioritarios");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
     }
     private void createUIComponents() {
-        table1 = new JTable();
+        table_planes = new JTable();
         Object[][] data = {};
         String[] titles = {"Planes"};
-        table1.setModel(new DefaultTableModel(data,titles));
+        table_planes.setModel(new DefaultTableModel(data,titles));
     }
 }

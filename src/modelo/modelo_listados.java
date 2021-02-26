@@ -142,8 +142,6 @@ public class modelo_listados extends conector {
                 ps.setString(1,Codigo);
                 ps.execute();
                 modelo_table.removeRow(fila);
-
-
             return true;
         }catch (SQLException a){
             a.printStackTrace();
